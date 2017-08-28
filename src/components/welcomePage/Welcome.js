@@ -4,6 +4,7 @@ import background from './background.png';
 
 class Welcome extends Component{
 
+	// Eventos para el login de Google
 	success(response){
 		this.props.login();
 	}
@@ -17,7 +18,7 @@ class Welcome extends Component{
 	}
 
 	render(){
-
+		// Estilos personalizados para esta vista
 		const backgroundStyle = {
 			width: "100%",
 			height: "100%",
@@ -29,7 +30,7 @@ class Welcome extends Component{
 
 		const stretch = {
 			width: "100%",
-      height: "100%"
+      		height: "100%"
 		}
 
 		const centered = {
@@ -40,7 +41,6 @@ class Welcome extends Component{
 		}
 
 		const textStyle = {
-			color: "white",
 			paddingBottom: "2em"
 		}
 
@@ -48,7 +48,7 @@ class Welcome extends Component{
 			<div style= {backgroundStyle}>
 				<img src= {background} style={stretch}/>
 				<div style= {centered}>
-					<h2 className="text-center">N En Linea</h2>
+					<h2 className="text-center" style={textStyle}>N En Linea</h2>
 
 					<GoogleLogin
 						clientId = "730064414140-pddt1udno397off9gdmj3so2teom4fv8.apps.googleusercontent.com"

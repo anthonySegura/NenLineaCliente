@@ -1,6 +1,9 @@
 import React, {Component} from 'react';
 import SessionBox from './SessionBox.js';
 
+/**
+ * Componente para mostrar el contenido del medio de la vista (Entre la navbar y las sesiones)
+ */
 class MiddleBox extends Component{
 	render(){
 		return (

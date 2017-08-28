@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 
 /**
- * Cuadro para crear una nueva sesion
+ *  Componente para crear nuevas sesiones
  */
 class SessionBox extends Component{
 
