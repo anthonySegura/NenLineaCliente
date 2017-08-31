@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import GoogleLogin from 'react-google-login';
-import background from './background.png';
+//import background from './background.png';
 
 class Welcome extends Component{
 
@@ -41,15 +41,14 @@ class Welcome extends Component{
 		}
 
 		const textStyle = {
-			paddingBottom: "2em"
+			paddingBottom: "2em",
+			color: "white"
 		}
 
 		return(
-			<div style= {backgroundStyle}>
-				<img src= {background} style={stretch}/>
+			<div>
 				<div style= {centered}>
-					<h2 className="text-center" style={textStyle}>N En Linea</h2>
-
+					<h2 className="text-center" style={textStyle}>N En Línea</h2>
 					<GoogleLogin
 						clientId = "730064414140-pddt1udno397off9gdmj3so2teom4fv8.apps.googleusercontent.com"
 						onSuccess = {this.success.bind(this)}

@@ -29,6 +29,7 @@ class App extends Component {
 	 * Renderiza el contenido de la vista principal
 	 */
 	renderBody(){
+	
 		// Si el usuario ya esta logueado
 		if(this.state.logged){
 			// Se renderiza la vista principal
@@ -36,7 +37,9 @@ class App extends Component {
 				return(
 					<div className="App">
 						<NavBar/>
-						<MiddleBox/>
+						<div style = {{backgroundImage: 'url(./style-2-10.png) !important'}} id = "x">
+							<MiddleBox/>
+						</div>
 						<SessionsArea/>
 					</div>
 				)

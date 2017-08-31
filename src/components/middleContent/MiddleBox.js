@@ -6,6 +6,7 @@ import SessionBox from './SessionBox.js';
  */
 class MiddleBox extends Component{
 	render(){
+
 		return (
 				<header className="masthead" id="porfolio">
 					<div className="container">
