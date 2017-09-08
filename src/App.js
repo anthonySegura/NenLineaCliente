@@ -16,6 +16,15 @@ class App extends Component {
 		this.login = this.login.bind(this);
 	}
 
+	componentWillMount(){
+		var userData = JSON.parse(localStorage.getItem('userData'));
+		if(userData != null){
+			this.setState({
+				logged: true
+			})
+		} 
+	}
+
 	/**
 	 * Evento que se pasa a la vista de inicio si el login es exitoso
 	 */
@@ -29,7 +38,11 @@ class App extends Component {
 	 * Renderiza el contenido de la vista principal
 	 */
 	renderBody(){
-	
+		const backgroundStyle = {
+			backgroundImage: "url(./style-2-10.png) !important",
+			backgroundAttachment: "fixed !important",
+			backgroundPosition: "center !important"
+		}
 		// Si el usuario ya esta logueado
 		if(this.state.logged){
 			// Se renderiza la vista principal

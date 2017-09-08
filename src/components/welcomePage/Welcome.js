@@ -6,7 +6,16 @@ class Welcome extends Component{
 
 	// Eventos para el login de Google
 	success(response){
-		this.props.login();
+		this.props.login(response);
+	
+		let userData = {
+			googleId: response.googleId,
+			email: response.profileObj.email,
+			nombre: response.profileObj.givenName,
+			imageUrl: response.profileObj.imageUrl
+		};
+		// Se almacenan los datos necesarios en el localStorage
+		localStorage.setItem('userData', JSON.stringify(userData));
 	}
 
 	error(response){
@@ -55,7 +64,8 @@ class Welcome extends Component{
 						onFailure = {this.error}
 						onRequest = {this.loading}
 						approvalPrompt="force"
-						responseType="code"
+						responseType="permission"
+						scope = "profile email"
 						isSignedIn={true}
 					/>
 				</div>
