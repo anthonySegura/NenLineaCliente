@@ -7,14 +7,14 @@ class Welcome extends Component{
 	// Eventos para el login de Google
 	success(response){
 		this.props.login(response);
-	
+		// Se guardan los datos necesarios del usuario
 		let userData = {
 			googleId: response.googleId,
 			email: response.profileObj.email,
 			nombre: response.profileObj.givenName,
 			imageUrl: response.profileObj.imageUrl
 		};
-		// Se almacenan los datos necesarios en el localStorage
+		// Se almacenan los datos necesarios en el LocalStorage
 		localStorage.setItem('userData', JSON.stringify(userData));
 	}
 
@@ -28,7 +28,7 @@ class Welcome extends Component{
 
 	render(){
 		// Estilos personalizados para esta vista
-		const backgroundStyle = {
+		/*const backgroundStyle = {
 			width: "100%",
 			height: "100%",
 			position: "fixed",
@@ -40,7 +40,7 @@ class Welcome extends Component{
 		const stretch = {
 			width: "100%",
       		height: "100%"
-		}
+		}*/
 
 		const centered = {
 			position: "absolute",

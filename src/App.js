@@ -3,13 +3,14 @@ import NavBar from './components/navbar/NavBar.js';
 import MiddleBox from './components/middleContent/MiddleBox.js';
 import SessionsArea from './components/sessionsList/SessionsArea.js';
 import Welcome from './components/welcomePage/Welcome.js';
+import SessionView from './components/gameRoom/SessionView.js';
 
 class App extends Component {
 
 	constructor(){
 		super();
 		this.state = {
-			playing: false,
+			playing: true,
 			logged: false
 		}
 		this.renderBody = this.renderBody.bind(this);
@@ -17,6 +18,7 @@ class App extends Component {
 	}
 
 	componentWillMount(){
+		// Se consultan los datos locales de usuario
 		var userData = JSON.parse(localStorage.getItem('userData'));
 		if(userData != null){
 			this.setState({
@@ -38,11 +40,6 @@ class App extends Component {
 	 * Renderiza el contenido de la vista principal
 	 */
 	renderBody(){
-		const backgroundStyle = {
-			backgroundImage: "url(./style-2-10.png) !important",
-			backgroundAttachment: "fixed !important",
-			backgroundPosition: "center !important"
-		}
 		// Si el usuario ya esta logueado
 		if(this.state.logged){
 			// Se renderiza la vista principal
@@ -50,7 +47,7 @@ class App extends Component {
 				return(
 					<div className="App">
 						<NavBar/>
-						<div style = {{backgroundImage: 'url(./style-2-10.png) !important'}} id = "x">
+						<div>
 							<MiddleBox/>
 						</div>
 						<SessionsArea/>
@@ -61,7 +58,8 @@ class App extends Component {
 			else {
 				return(
 					<div>
-
+						<NavBar/>
+							<SessionView/>
 					</div>
 				)
 			}
