@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
+import './resources/styles.css';
 import Board from './Board.js';
 
 class SessionView extends Component{
 	render(){
 		return(
-			<header className="masthead" id="gameBoard">
-				<span><h3>Aqui va el marcador y el turno</h3></span>
-				<div className="row">
+			<header className="masthead">
+				<div className="game-board">
 					<Board tamFila = {8}/>
 				</div>
 			</header>

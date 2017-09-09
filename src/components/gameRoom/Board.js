@@ -1,30 +1,21 @@
 import React , {Component} from 'react';
 import ficha from './resources/circle-placeholder-bright.svg';
-import './resources/styles.css';
+
 
 class Board extends Component{
-
-	constructor(){
-		super();
-		this.renderRows = this.renderRows.bind(this);
-	}
-
 	renderCell(fila, columna){
-		let border = {
-			border: '0'
-		}
 		return(
-			<td className="cell-0-0 selectable" key= {fila + ',' + columna}>
-				<img className="placeholder" src= {ficha} alt = "" style={border}/>
+			<td className={"cell-" + fila + "-" + columna + " selectable"} key= {fila + ',' + columna}>
+				<img className="placeholder" src= {ficha} alt = "" />
 			</td>
 		)
 	}
 
 	renderRows(){
-		let rows = [];
-		for(var i = 0; i < this.props.tamFila; i++){
+		let rows = []
+		for(let i = 0; i < this.props.tamFila; i++){
 			let columns = [];
-			for(var j = 0; j < this.props.tamFila; j++){
+			for(let j = 0; j < this.props.tamFila; j++){
 				columns.push(this.renderCell(i, j));
 			}
 			rows.push(<tr>{columns}</tr>);
@@ -33,6 +24,7 @@ class Board extends Component{
 	}
 
 	render(){
+
 		return(
 			<div className="container-fluid">
 				<div id="connect4" className="board">

@@ -55,7 +55,7 @@ class Welcome extends Component{
 		}
 
 		return(
-			<div>
+			<div className="welcome">
 				<div style= {centered}>
 					<h2 className="text-center" style={textStyle}>N En Línea</h2>
 					<GoogleLogin

@@ -10,7 +10,7 @@ class App extends Component {
 	constructor(){
 		super();
 		this.state = {
-			playing: true,
+			playing: false,
 			logged: false
 		}
 		this.renderBody = this.renderBody.bind(this);
