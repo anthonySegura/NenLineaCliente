@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import Session from './Session.js';
 
 /**
  * Componente en donde aparecen las listas de sesiones en espera
