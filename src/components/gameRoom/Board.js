@@ -1,12 +1,11 @@
 import React , {Component} from 'react';
 import ficha from './resources/circle-placeholder-bright.svg';
 
-
 class Board extends Component{
 	renderCell(fila, columna){
 		return(
 			<td className={"cell-" + fila + "-" + columna + " selectable"} key= {fila + ',' + columna}>
-				<img className="placeholder" src= {ficha} alt = "" />
+				<img className="placeholder" src= {ficha} alt = ""  />
 			</td>
 		)
 	}
@@ -24,16 +23,14 @@ class Board extends Component{
 	}
 
 	render(){
-
+	
 		return(
-			<div className="container-fluid">
-				<div id="connect4" className="board">
-					<table className="table-responsive">
-						<tbody>
-							{this.renderRows()}
-						</tbody>
-					</table>
-				</div>
+			<div id="connect4">
+				<table>
+					<tbody>
+					{this.renderRows()}
+					</tbody>
+				</table>
 			</div>
 		)
 	}

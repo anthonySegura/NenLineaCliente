@@ -9,8 +9,9 @@ class App extends Component {
 
 	constructor(){
 		super();
+		// FIXME: pasar al Store de REDUX
 		this.state = {
-			playing: false,
+			playing: true,
 			logged: false
 		}
 		this.renderBody = this.renderBody.bind(this);
@@ -59,7 +60,7 @@ class App extends Component {
 				return(
 					<div>
 						<NavBar/>
-							<SessionView/>
+						<SessionView/>
 					</div>
 				)
 			}
