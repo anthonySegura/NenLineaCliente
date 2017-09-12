@@ -17,7 +17,7 @@ class SessionsArea extends Component{
 	}
 
 	createSocket(){
-		let cable = Cable.createConsumer('ws:nenlinea-rails.herokuapp.com/cable');
+		let cable = Cable.createConsumer('wss://nenlinea-rails.herokuapp.com/cable');
 		this.sesion = cable.subscriptions.create({
 			channel: 'SesionesEnEsperaChannel'
 		}, {

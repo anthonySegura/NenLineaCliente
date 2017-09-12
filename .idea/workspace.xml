@@ -59,8 +59,8 @@
       <file leaf-file-name="SessionsArea.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/sessionsList/SessionsArea.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
-              <caret line="19" column="50" lean-forward="false" selection-start-line="19" selection-start-column="50" selection-end-line="19" selection-end-column="50" />
+            <state relative-caret-position="240">
+              <caret line="25" column="8" lean-forward="true" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -327,12 +327,12 @@
       <workItem from="1505092657943" duration="10212000" />
       <workItem from="1505104045830" duration="277000" />
       <workItem from="1505107486050" duration="5589000" />
-      <workItem from="1505176047400" duration="7996000" />
+      <workItem from="1505176047400" duration="8332000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="110002000" />
+    <option name="totallyTimeSpent" value="110338000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -762,8 +762,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/sessionsList/SessionsArea.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="19" column="50" lean-forward="false" selection-start-line="19" selection-start-column="50" selection-end-line="19" selection-end-column="50" />
+        <state relative-caret-position="240">
+          <caret line="25" column="8" lean-forward="true" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
