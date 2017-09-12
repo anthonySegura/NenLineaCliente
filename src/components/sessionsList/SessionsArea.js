@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Session from './Session.js';
+import baseConexion from '../../Contantes.js';
 import Cable from 'actioncable';
 
 /**
@@ -16,7 +17,7 @@ class SessionsArea extends Component{
 	}
 
 	createSocket(){
-		let cable = Cable.createConsumer('ws://localhost:3001/cable');
+		let cable = Cable.createConsumer('ws:baseConexion/cable');
 		this.sesion = cable.subscriptions.create({
 			channel: 'SesionesEnEsperaChannel'
 		}, {
