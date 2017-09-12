@@ -9,7 +9,7 @@ class SessionBox extends Component{
 		return(
 			<div className="col-sm-4">
 				<div>
-					<img className="img-fluid" src = {this.props.image} title= {this.props.title} alt = ""/>
+					<img className="img-fluid" src = {this.props.image} alt = "" style = {{borderRadius: '15px', paddingBottom: '2%'}}/>
 				</div>
 			</div>
 		)

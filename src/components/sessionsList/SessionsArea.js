@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import Session from './Session.js';
 
 /**
  * Componente en donde aparecen las listas de sesiones en espera
@@ -7,6 +8,7 @@ class SessionsArea extends Component{
 
 	// Renderiza dos columnas de sesiones
 	render(){
+
 		return(
 			<footer className="text-center">
 				<div className="footer-above">
@@ -14,9 +16,15 @@ class SessionsArea extends Component{
 						<div className="row">
 							<div className="col-md-6">
 								<h3>Mis Sesiones</h3>
+								<Session/>
+								<Session/>
+								<Session/>
 							</div>
 							<div className="col-md-6">
 								<h3>Sesiones en espera</h3>
+								<Session/>
+								<Session/>
+								<Session/>
 							</div>
 						</div>
 					</div>

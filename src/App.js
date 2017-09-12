@@ -11,8 +11,8 @@ class App extends Component {
 		super();
 		// FIXME: pasar al Store de REDUX
 		this.state = {
-			playing: true,
-			logged: false
+			playing: false,
+			logged: true
 		}
 		this.renderBody = this.renderBody.bind(this);
 		this.login = this.login.bind(this);
@@ -41,6 +41,15 @@ class App extends Component {
 	 * Renderiza el contenido de la vista principal
 	 */
 	renderBody(){
+
+		// FIXME: arreglar para que se vean las sesiones en la vista movil
+		const footerStyle = {
+			backgroundColor: '#2C3E50',
+			width: '100%',
+			height: '100%',
+			// position: 'fixed'
+		}
+
 		// Si el usuario ya esta logueado
 		if(this.state.logged){
 			// Se renderiza la vista principal
@@ -51,7 +60,9 @@ class App extends Component {
 						<div>
 							<MiddleBox/>
 						</div>
-						<SessionsArea/>
+						<div style = {footerStyle}>
+							<SessionsArea/>
+						</div>
 					</div>
 				)
 			}

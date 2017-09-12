@@ -6,17 +6,23 @@ import {Grid, Row, Col} from 'react-bootstrap';
 class SessionView extends Component{
 
 	render(){
-
+		// FIXME: quitar estos estilos de aqui
 		const sideBar = {
-			background: '#29666D'
+			background: '#29666D',
 		}
 
 		const tableStyle = {
-			background: '#fff'
+			borderRadius: '15px',
+			background: '#fff',
 		}
 
 		const text = {
 			paddingTop: '5%',
+		}
+
+		const chat = {
+			float: 'botton',
+			height: '100%',
 		}
 
 		return(
@@ -30,7 +36,9 @@ class SessionView extends Component{
 							<div>
 								<h3 style={text}>Espacio para el jugador 1</h3>
 								<h3 style={text}>Espacio para el jugador 2</h3>
-								<h3 style={text}>Aquí va el Chat</h3>
+								<div style={chat}>
+									<h3 style={text}>Aquí va el Chat</h3>
+								</div>
 							</div>
 						</Col>
 					</Row>
