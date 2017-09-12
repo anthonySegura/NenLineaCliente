@@ -1,3 +1,3 @@
-const baseConexion = "https://nenlinea-rails.herokuapp.com/";
+const baseConexion = "http://nenlinea-rails.herokuapp.com/";
 
 export default baseConexion

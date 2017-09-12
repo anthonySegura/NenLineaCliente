@@ -17,7 +17,7 @@ class SessionsArea extends Component{
 	}
 
 	createSocket(){
-		let cable = Cable.createConsumer('ws:baseConexion/cable');
+		let cable = Cable.createConsumer('ws:' + baseConexion + '/cable');
 		this.sesion = cable.subscriptions.create({
 			channel: 'SesionesEnEsperaChannel'
 		}, {
