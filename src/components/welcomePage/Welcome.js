@@ -5,8 +5,9 @@ import GoogleLogin from 'react-google-login';
 class Welcome extends Component{
 
 	// Eventos para el login de Google
+	// FIXME: verificar el usuario con el backend
 	success(response){
-		this.props.login(response);
+		this.props.login(true);
 		// Se guardan los datos necesarios del usuario
 		let userData = {
 			googleId: response.googleId,
@@ -18,29 +19,7 @@ class Welcome extends Component{
 		localStorage.setItem('userData', JSON.stringify(userData));
 	}
 
-	error(response){
-
-	}
-
-	loading(response){
-
-	}
-
 	render(){
-		// Estilos personalizados para esta vista
-		/*const backgroundStyle = {
-			width: "100%",
-			height: "100%",
-			position: "fixed",
-			left: "0px",
-			top: "0px",
-			zIndex: "-1"
-		}
-
-		const stretch = {
-			width: "100%",
-      		height: "100%"
-		}*/
 
 		const centered = {
 			position: "absolute",
@@ -61,8 +40,8 @@ class Welcome extends Component{
 					<GoogleLogin
 						clientId = "730064414140-pddt1udno397off9gdmj3so2teom4fv8.apps.googleusercontent.com"
 						onSuccess = {this.success.bind(this)}
-						onFailure = {this.error}
-						onRequest = {this.loading}
+						onFailure = {response => {}}
+						onRequest = {response => {}}
 						approvalPrompt="force"
 						responseType="permission"
 						scope = "profile email"

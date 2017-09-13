@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import Session from './Session.js';
-import baseConexion from '../../Contantes.js';
-import Cable from 'actioncable';
+import {sesionListener} from '../../sockets/socketCreator.js';
 
 /**
  * Componente en donde aparecen las listas de sesiones en espera
@@ -13,43 +12,37 @@ class SessionsArea extends Component{
 		this.state = {
 			sesiones: []
 		}
+		this.onReceived = this.onReceived.bind(this);
 		this.renderSessions = this.renderSessions.bind(this);
 	}
 
-	createSocket(){
-		let cable = Cable.createConsumer('ws://nenlinea-rails.herokuapp.com/cable');
-		this.sesion = cable.subscriptions.create({
-			channel: 'SesionesEnEsperaChannel'
-		}, {
-			connected: () => {
-				console.log('conectado');
-			},
-			received: (data) => {
-				console.log(data);
-				/*let sesiones = this.state.sesiones;
-				sesiones.push(data);*/
-				this.setState({
-					sesiones: data.sesiones
-				})
-			},
-			obtenerSesionesEnEspera: function () {
-				this.perform('obtenerSesionesEnEspera',{})
-			}
-		});
+	/**
+	 * Callback para manejar el evento onReceived del socket
+	 * @param data
+	 */
+	onReceived(data){
+		console.log(data);
+		this.setState({
+			sesiones: data.sesiones
+		})
 	}
 
 	componentWillMount(){
-		this.createSocket();
+		// Se inicia el socket antes de montar el componente
+		sesionListener(this.onReceived);
 	}
 
-	renderSessions(){
+	renderSessions(event){
 		return(
 			this.state.sesiones.map(function (value, index, array) {
-				return <Session user = 'Desconocido'
+				return <Session key = {index}
+												user = {value.nickname}
 												n2win = {value.n2win}
 												nPartidas = {value.n_partidas}
-												tamTablero = {value.tam_tablero}/>
-			}
+												tamTablero = {value.tam_tablero}
+				                idSesion = {value.id}
+								/>
+				}
 			)
 		)
 	}

@@ -5,36 +5,42 @@ import SessionsArea from './components/sessionsList/SessionsArea.js';
 import Welcome from './components/welcomePage/Welcome.js';
 import SessionView from './components/gameRoom/SessionView.js';
 
+import store from './store';
+import {login} from './actionCreators.js';
+
 class App extends Component {
 
 	constructor(){
 		super();
-		// FIXME: pasar al Store de REDUX
 		this.state = {
 			playing: false,
 			logged: true
 		}
+
+		// Se suscribe este estado al store global
+		store.subscribe(() => {
+			this.setState({
+				playing: store.getState().playing,
+				logged: store.getState().logged
+			});
+		});
+
 		this.renderBody = this.renderBody.bind(this);
-		this.login = this.login.bind(this);
 	}
 
 	componentWillMount(){
 		// Se consultan los datos locales de usuario
 		var userData = JSON.parse(localStorage.getItem('userData'));
 		if(userData != null){
-			this.setState({
-				logged: true
-			})
+			store.dispatch(login(true))
 		} 
 	}
 
 	/**
 	 * Evento que se pasa a la vista de inicio si el login es exitoso
 	 */
-	login(){
-		this.setState({
-			logged: true
-		})
+	_login(state){
+		store.dispatch(login(state));
 	}
 
 	/**
@@ -79,7 +85,7 @@ class App extends Component {
 		// Si no esta logueado se renderiza la vista de inicio
 		else{
 			return(
-				<Welcome login = {this.login}/>
+				<Welcome login = {this._login}/>
 			)
 		}
 	}
