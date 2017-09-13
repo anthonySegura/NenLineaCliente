@@ -1,15 +1,17 @@
-const iniciarJuego = (playing, game_config) => {
+const iniciarJuego = (game_config, session_socket) => {
 	return{
 		type: "INICIAR_JUEGO",
-		playing,
-		game_config
+		playing: true,
+		game_config: game_config,
+		session_socket: session_socket
 	}
 };
 
-const cerrarJuego = playing => {
+// TODO: Poner un mensaje alertando al usuario que va a perder la partida
+const cerrarJuego = () => {
 	return{
 		type: "CERRAR_JUEGO",
-		playing
+		playing: false
 	}
 };
 
@@ -20,4 +22,11 @@ const login = logged => {
 	}
 };
 
-export {iniciarJuego, cerrarJuego, login};
+const sendMessage = msg => {
+	return{
+		type: "ADD_MESSAGE",
+		message: msg
+	}
+}
+
+export {iniciarJuego, cerrarJuego, login, sendMessage};

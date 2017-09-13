@@ -5,7 +5,8 @@ const reducer = (state, action) => {
 		return{
 			...state,
 			playing: true,
-			game_config: action.game_config
+			game_config: action.game_config,
+			session_socket: action.session_socket
 		}
 	}
 	else if(action.type === "CERRAR_JUEGO"){
@@ -20,6 +21,12 @@ const reducer = (state, action) => {
 			logged: action.logged
 		}
 	}
+	else if(action.type === "ADD_MESSAGE"){
+		return{
+			...state,
+			messages: state.messages.concat(action.message)
+		}
+	}
 }
 
-export default createStore(reducer, {playing: false, logged: false});
+export default createStore(reducer, {playing: false, logged: false, session_socket: null ,messages: []});

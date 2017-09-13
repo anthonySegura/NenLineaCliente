@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import './resources/styles.css';
 import Board from './Board.js';
 import {Grid, Row, Col} from 'react-bootstrap';
+import Chat from './Chat';
 
 class SessionView extends Component{
 
@@ -37,7 +38,7 @@ class SessionView extends Component{
 								<h3 style={text}>Espacio para el jugador 1</h3>
 								<h3 style={text}>Espacio para el jugador 2</h3>
 								<div style={chat}>
-									<h3 style={text}>Aquí va el Chat</h3>
+									<Chat/>
 								</div>
 							</div>
 						</Col>
