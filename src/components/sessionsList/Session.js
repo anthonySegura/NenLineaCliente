@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import '../gameRoom/resources/styles.css';
 import store from '../../store';
-import {iniciarJuego, sendMessage} from '../../actionCreators';
+import {iniciarJuego, sendMessage, actualizarEstadoJuego} from '../../actionCreators';
 import {joinSession} from '../../sockets/socketCreator';
 
 /**
@@ -17,21 +17,36 @@ class Session extends Component{
 	onReceived(data){
 		console.log(data);
 		if(data.action === 'message'){
-			store.dispatch(sendMessage(data.message))
+			store.dispatch(sendMessage(data))
+		}
+		else if(data.action === 'Mover'){
+			console.log("Actualizando el tablero");
+			console.log(data);
+			store.dispatch(actualizarEstadoJuego(data));
+		}
+		else if(data.action === 'Nueva Partida'){
+			store.dispatch(actualizarEstadoJuego(data));
 		}
 	}
 
-
 	/**
 	 * Evento del boton
+	 * Solicita unirse a una sesion en espera
+	 * Inicializa el socket
 	 */
 	onClick(){
-		// FIXME: agregar la configuracion del juego
-		// FIXME: crear el callback onReceived
+		let game_config = {
+			tamFila: this.props.tamTablero,
+			tamTablero: this.props.tamTablero,
+			n2win: this.props.n2win,
+			tiempo_espera: this.props.tiempoEspera
+		}
 		// Se crea el socket
-		let session = joinSession(this.onReceived, this.props.idSesion);
+		console.log(this.props.idSesion);
+		let session = joinSession(this.onReceived, this.props.idSesion, store.getState().user_info.nombre);
 		// Se actualiza el store para renderizar la vista
-		store.dispatch(iniciarJuego({}, session));
+		// FIXME: iniciar el juego despues de recibir confirmación
+		store.dispatch(iniciarJuego(game_config, session));
 	}
 
 	render(){

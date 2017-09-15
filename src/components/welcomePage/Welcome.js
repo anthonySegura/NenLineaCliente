@@ -1,13 +1,16 @@
 import React, {Component} from 'react';
 import GoogleLogin from 'react-google-login';
+import store from  '../../store';
+import {login} from '../../actionCreators';
+import {validarUsuario} from "../../serverRequests";
+
 //import background from './background.png';
 
 class Welcome extends Component{
 
 	// Eventos para el login de Google
-	// FIXME: verificar el usuario con el backend
 	success(response){
-		this.props.login(true);
+		console.log('respuesta de google');
 		// Se guardan los datos necesarios del usuario
 		let userData = {
 			googleId: response.googleId,
@@ -15,8 +18,11 @@ class Welcome extends Component{
 			nombre: response.profileObj.givenName,
 			imageUrl: response.profileObj.imageUrl
 		};
+		store.dispatch(login(true, userData));
 		// Se almacenan los datos necesarios en el LocalStorage
 		localStorage.setItem('userData', JSON.stringify(userData));
+		// Se verifica el usuario en el server
+		validarUsuario(userData);
 	}
 
 	render(){

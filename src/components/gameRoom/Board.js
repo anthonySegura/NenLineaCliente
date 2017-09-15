@@ -1,17 +1,18 @@
 import React , {Component} from 'react';
-import ficha from './resources/circle-placeholder-bright.svg';
+import Card from './Card';
+
+import fichaLocal from './resources/circle-dark.svg';
 
 class Board extends Component{
+
 	renderCell(fila, columna){
 		return(
-			<td className={"cell-" + fila + "-" + columna + " selectable"} key= {fila + ',' + columna}>
-				<img className="placeholder" src= {ficha} alt = ""  />
-			</td>
+			<Card fila = {fila} columna = {columna} cardImg = {fichaLocal}/>
 		)
 	}
 
 	renderRows(){
-		let rows = []
+		let rows = [];
 		for(let i = 0; i < this.props.tamFila; i++){
 			let columns = [];
 			for(let j = 0; j < this.props.tamFila; j++){
@@ -23,7 +24,6 @@ class Board extends Component{
 	}
 
 	render(){
-	
 		return(
 			<div id="connect4">
 				<table>

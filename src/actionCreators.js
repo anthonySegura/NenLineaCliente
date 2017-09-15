@@ -3,7 +3,7 @@ const iniciarJuego = (game_config, session_socket) => {
 		type: "INICIAR_JUEGO",
 		playing: true,
 		game_config: game_config,
-		session_socket: session_socket
+		session_socket: session_socket,
 	}
 };
 
@@ -11,14 +11,16 @@ const iniciarJuego = (game_config, session_socket) => {
 const cerrarJuego = () => {
 	return{
 		type: "CERRAR_JUEGO",
-		playing: false
+		playing: false,
+		session_socket: null
 	}
 };
 
-const login = logged => {
+const login = (logged, user_info) => {
 	return {
 		type: "LOGIN",
-		logged
+		logged,
+		user_info
 	}
 };
 
@@ -27,6 +29,13 @@ const sendMessage = msg => {
 		type: "ADD_MESSAGE",
 		message: msg
 	}
+};
+
+const actualizarEstadoJuego = game_state => {
+	return{
+		type: "UPDATE_GAME",
+		game_state
+	}
 }
 
-export {iniciarJuego, cerrarJuego, login, sendMessage};
+export {iniciarJuego, cerrarJuego, login, sendMessage, actualizarEstadoJuego};

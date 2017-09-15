@@ -3,14 +3,13 @@ import './resources/styles.css';
 import Board from './Board.js';
 import {Grid, Row, Col} from 'react-bootstrap';
 import Chat from './Chat';
+import Notifications, {notify} from 'react-notify-toast';
+
+import store from '../../store';
 
 class SessionView extends Component{
 
 	render(){
-		// FIXME: quitar estos estilos de aqui
-		const sideBar = {
-			background: '#29666D',
-		}
 
 		const tableStyle = {
 			borderRadius: '15px',
@@ -21,23 +20,18 @@ class SessionView extends Component{
 			paddingTop: '5%',
 		}
 
-		const chat = {
-			float: 'botton',
-			height: '100%',
-		}
-
 		return(
 			<header className="masthead">
 				<Grid>
 					<Row style = {tableStyle}>
 						<Col sm = {8}>
-							<Board tamFila = {8}/>
+							<Board tamFila = {store.getState().game_config.tamFila}/>
 						</Col>
-						<Col sm = {4} style = {sideBar}>
+						<Col sm = {4} style = {{background: '#29666D'}}>
 							<div>
 								<h3 style={text}>Espacio para el jugador 1</h3>
 								<h3 style={text}>Espacio para el jugador 2</h3>
-								<div style={chat}>
+								<div>
 									<Chat/>
 								</div>
 							</div>

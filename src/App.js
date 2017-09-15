@@ -14,7 +14,7 @@ class App extends Component {
 		super();
 		this.state = {
 			playing: false,
-			logged: true
+			logged: false
 		}
 
 		// Se suscribe este estado al store global
@@ -32,22 +32,14 @@ class App extends Component {
 		// Se consultan los datos locales de usuario
 		var userData = JSON.parse(localStorage.getItem('userData'));
 		if(userData != null){
-			store.dispatch(login(true))
-		} 
-	}
-
-	/**
-	 * Evento que se pasa a la vista de inicio si el login es exitoso
-	 */
-	_login(state){
-		store.dispatch(login(state));
+			store.dispatch(login(true, userData));
+		}
 	}
 
 	/**
 	 * Renderiza el contenido de la vista principal
 	 */
 	renderBody(){
-
 		// FIXME: arreglar para que se vean las sesiones en la vista movil
 		const footerStyle = {
 			backgroundColor: '#2C3E50',
@@ -85,14 +77,14 @@ class App extends Component {
 		// Si no esta logueado se renderiza la vista de inicio
 		else{
 			return(
-				<Welcome login = {this._login}/>
+				<Welcome/>
 			)
 		}
 	}
 
   render() {
     return (
-		this.renderBody()
+			this.renderBody()
     );
   }
 }
