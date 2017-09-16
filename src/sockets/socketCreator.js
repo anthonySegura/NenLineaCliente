@@ -87,8 +87,6 @@ function newSession(game_config, user) {
 				playMessageSound(data);
 			}
 			else if(data.action === 'Mover'){
-				console.log("Actualizando el tablero");
-				console.log(data);
 				store.dispatch(actualizarEstadoJuego(data));
 			}
 			else if(data.action === 'Nueva Partida'){

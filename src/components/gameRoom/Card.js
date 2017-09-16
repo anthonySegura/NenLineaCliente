@@ -7,8 +7,6 @@ import fichaRival from './resources/circle-light.svg';
 import fichaRivalWinner from './resources/circle-light-winner.svg';
 import fichaWinner from './resources/circle-dark-winner.svg';
 
-import Notifications, {notify} from 'react-notify-toast';
-
 class Card extends Component{
 	constructor() {
 		super();
@@ -49,15 +47,6 @@ class Card extends Component{
 	 * @param winners
 	 */
 	showWinnerPosition(winners){
-		// for(let i = 0; i < winners.length; i++){
-		// 	if(this.to1DIndex(this.props.fila, this.props.columna) === winners[i]){
-		// 		let winnerCard = (store.getState().game_state.turno === store.getState().user_info.nombre) ? fichaWinner : fichaRivalWinner;
-		// 		this.setState({
-		// 			img: winnerCard
-		// 		});
-		// 		break;
-		// 	}
-		// }
 		winners.map(i => {
 			if(this.to1DIndex(this.props.fila, this.props.columna) === i){
 				let winnerCard = (store.getState().game_state.turno === store.getState().user_info.nombre) ? fichaWinner : fichaRivalWinner;
@@ -86,7 +75,6 @@ class Card extends Component{
 				let columna = game_state.columna;
 				// Si hay ganador
 				if(game_state.game_state !== 'Playing') {
-					notify.show('Ganador');
 					let winners = game_state.fichas_ganadoras;
 					this.showWinnerPosition(winners);
 					return;
@@ -103,10 +91,6 @@ class Card extends Component{
 		if(game_state && game_state.game_state === 'Playing' && game_state.turno === user) {
 			let socket = store.getState().session_socket
 			socket.mover(this.props.columna);
-		}
-		//TODO: hacer notificaciones y algo de carga mientras se espera el segundo jugador
-		else {
-			alert('Poner un mensaje bonito aqui');
 		}
 	}
 

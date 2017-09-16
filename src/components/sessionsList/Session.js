@@ -24,7 +24,8 @@ class Session extends Component{
 			tamFila: this.props.tamTablero,
 			tamTablero: this.props.tamTablero,
 			n2win: this.props.n2win,
-			tiempo_espera: this.props.tiempoEspera
+			tiempo_espera: this.props.tiempoEspera,
+			rival: this.props.user
 		}
 		// Se crea el socket
 		let session = joinSession(this.props.idSesion, store.getState().user_info.nombre);

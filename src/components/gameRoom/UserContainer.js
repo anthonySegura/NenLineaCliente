@@ -3,20 +3,26 @@ import './resources/styles.css';
 
 class UserContainer extends Component{
 
+	constructor(){
+		super();
+		this.state = {
+			background: '',
+			nickname: ''
+		}
+		this.setBackground = this.setBackground.bind(this);
+	}
 
-// <div className="container" style={{backgroundColor: this.state.background, margin: '0'}}>
-// <div className="row">
-// <div className="col-xs-3" style={itemStyle}>
-// <h6 style={{display: 'inline-block'}}>{this.props.user}</h6>
-// </div>
-// <div className="col-xs-3" style={itemStyle}>
-// {this.props.marcador}
-// </div>
-// <div className="col-xs-3" style={itemStyle}>
-// <img className="img-fluid" src={this.props.img} height= '30px' width= '30px'/>
-// </div>
-// </div>
-// </div>
+	setBackground(img){
+		this.setState({
+			background: img
+		});
+	}
+
+	setUser(nickname){
+		this.setState({
+			nickname: nickname
+		})
+	}
 
 	render(){
 
@@ -26,9 +32,9 @@ class UserContainer extends Component{
 		}
 
 		return(
-				<div className="row" style= {{backgroundColor: this.props.background}}>
+				<div className="row" style= {{backgroundColor: (this.state.background === '')? '#29666D' : this.state.background}}>
 					<div className="col-md-4" style={itemStyle}>
-						{this.props.user}
+						{(this.state.nickname === '') ? this.props.user : this.state.nickname}
 					</div>
 					<div className="col-md-4" style={itemStyle}>
 						{0}

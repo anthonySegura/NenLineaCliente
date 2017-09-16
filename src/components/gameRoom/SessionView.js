@@ -8,14 +8,45 @@ import fichaLocal from './resources/circle-light.svg';
 import fichaRival from './resources/circle-dark.svg';
 
 import store from '../../store';
+import 'react-notifications/lib/notifications.css';
+import {NotificationContainer, NotificationManager} from 'react-notifications';
+
 
 class SessionView extends Component{
 
+	constructor(){
+		super();
 
-// <ul className="players">
-// <UserContainer user = {store.getState().user_info.nombre} img = {fichaLocal}/>
-// <UserContainer user = 'Esperando Rival' img = {fichaRival}/>
-// </ul>
+		this.state = {
+			game_config: store.getState().game_config
+		}
+
+		store.subscribe(() => {
+
+			const local = store.getState().user_info.nombre;
+			const fondoEspera = '#29666D';
+			const fondoTurno = '#cd5c5c';
+
+			// Se actualiza el indicador de turno
+			if(store.getState().game_state.turno === local){
+				this.refs.local.setBackground(fondoTurno);
+				this.refs.rival.setBackground(fondoEspera);
+			}
+			else {
+				this.refs.local.setBackground(fondoEspera);
+				this.refs.rival.setBackground(fondoTurno);
+			}
+
+			// Se actualiza el nombre del rival en el momento que se conecta a la sesión
+			// En caso de que este usuario se el creador de la sesion
+			if(store.getState().game_state.rival){
+				const rival = store.getState().game_state.rival;
+				this.state.game_config.rival = rival;
+				this.refs.rival.setUser(rival);
+				NotificationManager.info(`${rival} se ha unido a la sesión`);
+			}
+		});
+	}
 
 	render(){
 
@@ -30,6 +61,7 @@ class SessionView extends Component{
 
 		return(
 				<header className="masthead">
+					<NotificationContainer/>
 					<Grid>
 						<Row style = {tableStyle}>
 							<Col sm = {8}>
@@ -37,8 +69,8 @@ class SessionView extends Component{
 							</Col>
 							<Col className = "game-background" sm = {4} style = {{background: '#29666D'}}>
 								<div className="sidebar">
-									<UserContainer user = {store.getState().user_info.nombre} img = {fichaLocal} background = '#cd5c5c'/>
-									<UserContainer user = {'Esperando Jugador'} img = {fichaRival} background = '#29666D'/>
+									<UserContainer ref = "local" user = {store.getState().user_info.nombre} img = {fichaLocal}/>
+									<UserContainer ref = "rival" user = {this.state.game_config.rival} img = {fichaRival}/>
 									<Chat/>
 								</div>
 							</Col>

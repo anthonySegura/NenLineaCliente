@@ -51,6 +51,12 @@ const reducer = (state, action) => {
 			game_state: action.game_state
 		}
 	}
+	else if(action.type === 'SET_RIVAL'){
+		return{
+			...state,
+			game_config: action.game_config
+		}
+	}
 }
 
 export default createStore(reducer, {playing: false, logged: false, user_info: [],session_socket: null , messages: []});

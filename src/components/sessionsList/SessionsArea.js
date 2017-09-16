@@ -24,7 +24,7 @@ class SessionsArea extends Component{
 		console.log(data);
 		this.setState({
 			sesiones: data.sesiones
-		})
+		});
 	}
 
 	componentWillMount(){
@@ -58,7 +58,7 @@ class SessionsArea extends Component{
 						<div className="row">
 							<div className="col-md-6">
 								<h3>Mis Sesiones</h3>
-								{this.renderSessions()}
+
 							</div>
 							<div className="col-md-6">
 								<h3>Sesiones en espera</h3>

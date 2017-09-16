@@ -29,7 +29,8 @@ class GameConfig extends Component{
 			n2win: this.state.n2win,
 			tiempo_espera: this.state.tiempo_espera,
 			n_partidas: this.state.n_partidas,
-			tipo: store.getState().tipoSesion
+			tipo: store.getState().tipoSesion,
+			rival: 'Esperando Jugador'
 		};
 		// Se inicializa el socket
 		let session = newSession(game_config, store.getState().user_info.nombre);
@@ -39,7 +40,6 @@ class GameConfig extends Component{
 	setNpartidas(value){
 		const numbers = ['1','2','3','4','5','6','7','8','9','0'];
 		console.log(value);
-
 	}
 
 	render(){
