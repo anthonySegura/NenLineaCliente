@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import store from '../../store';
 import {closeModal, iniciarJuego} from "../../actionCreators";
 import {newSession} from "../../sockets/socketCreator";
+import {validarUsuario} from "../../serverRequests";
 
 class GameConfig extends Component{
 
@@ -15,6 +16,7 @@ class GameConfig extends Component{
 				 	tipo: 'pvp'
 		}
 		this.iniciarSesion = this.iniciarSesion.bind(this);
+		this.setNpartidas = this.setNpartidas.bind(this);
 	}
 
 	close(){
@@ -32,6 +34,12 @@ class GameConfig extends Component{
 		// Se inicializa el socket
 		let session = newSession(game_config, store.getState().user_info.nombre);
 		store.dispatch(iniciarJuego(game_config, session));
+	}
+
+	setNpartidas(value){
+		const numbers = ['1','2','3','4','5','6','7','8','9','0'];
+		console.log(value);
+
 	}
 
 	render(){
@@ -64,7 +72,7 @@ class GameConfig extends Component{
 
 		return (
 			<div style={modalStyle} className="GameConfig">
-				<div className="portfolio-modal modal-fade full-screen"  tabindex="-1" role="dialog" aria-hidden="true">
+				<div className="portfolio-modal modal-fade full-screen"  tabIndex="-1" role="dialog" aria-hidden="true">
 					<div className="modal-dialog" role="document">
 						<div className="modal-content">
 							<div className="container">
@@ -77,7 +85,7 @@ class GameConfig extends Component{
 													<li style={inline}>
 														<div className="input-group">
 															<span className="input-group-addon">Tamaño del Tablero</span>
-															<select className="custom-select" value={this.state.tamFila} onChange={e => {this.setState({tamFila: e.target.value})}}>
+															<select className="custom-select" value={this.state.tamFila} onChange={(e) => this.setState({tamFila: e.target.value})}>
 																<option>5x5</option>
 																<option>6x6</option>
 																<option>7x7</option>
@@ -99,11 +107,11 @@ class GameConfig extends Component{
 													<li style={inline}>
 														<div className="input-group">
 															<span className="input-group-addon">Partidas</span>
-															<input class="text form-control"
+															<input className="text form-control"
 															       placeholder=""
 															       aria-describedby="basic-addon1"
 															       value={this.state.n_partidas}
-															       onChange={e => {this.setState({n_partidas: e.target.value})}}/>
+															/>
 														</div>
 													</li>
 												</ul>

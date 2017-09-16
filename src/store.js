@@ -18,14 +18,12 @@ const reducer = (state, action) => {
 			tipoSesion: action.tipo
 		}
 	}
-
 	else if(action.type ===  "CLOSE_MODAL"){
 		return{
 			...state,
 			openModal: false
 		}
 	}
-
 	else if(action.type === "CERRAR_JUEGO"){
 		return{
 			...state,

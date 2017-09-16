@@ -11,7 +11,7 @@ class NavBar extends Component{
 				<div className="container">
 					<a className="navbar-brand js-scroll-trigger" href="#root" onClick={() => {
 						store.dispatch(cerrarJuego());
-					}}>N en Linea</a>
+					}}>N en Línea</a>
 					<button className="navbar-toggler navbar-toggler-right"
 					        type="button"
 					        data-toggle="collapse"

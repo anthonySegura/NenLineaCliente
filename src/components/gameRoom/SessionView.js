@@ -3,10 +3,19 @@ import './resources/styles.css';
 import Board from './Board.js';
 import {Grid, Row, Col} from 'react-bootstrap';
 import Chat from './Chat';
+import UserContainer from './UserContainer';
+import fichaLocal from './resources/circle-light.svg';
+import fichaRival from './resources/circle-dark.svg';
 
 import store from '../../store';
 
 class SessionView extends Component{
+
+
+// <ul className="players">
+// <UserContainer user = {store.getState().user_info.nombre} img = {fichaLocal}/>
+// <UserContainer user = 'Esperando Rival' img = {fichaRival}/>
+// </ul>
 
 	render(){
 
@@ -26,13 +35,11 @@ class SessionView extends Component{
 							<Col sm = {8}>
 								<Board tamFila = {store.getState().game_config.tamFila}/>
 							</Col>
-							<Col sm = {4} style = {{background: '#29666D'}}>
-								<div>
-									<h3 style={text}>Espacio para el jugador 1</h3>
-									<h3 style={text}>Espacio para el jugador 2</h3>
-									<div>
-										<Chat/>
-									</div>
+							<Col className = "game-background" sm = {4} style = {{background: '#29666D'}}>
+								<div className="sidebar">
+									<UserContainer user = {store.getState().user_info.nombre} img = {fichaLocal} background = '#cd5c5c'/>
+									<UserContainer user = {'Esperando Jugador'} img = {fichaRival} background = '#29666D'/>
+									<Chat/>
 								</div>
 							</Col>
 						</Row>
