@@ -82,6 +82,13 @@ section {
     font-size: 3em;
     margin: 0; }
 
+.GameConfig{
+  -webkit-box-shadow: 10px 10px 132px 13px rgba(0,0,0,0.82);
+  -moz-box-shadow: 10px 10px 132px 13px rgba(0,0,0,0.82);
+  box-shadow: 10px 10px 132px 13px rgba(0,0,0,0.82);
+}
+
+
 section.success {
   color: white;
   background: #18BC9C; }

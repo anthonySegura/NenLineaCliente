@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import '../gameRoom/resources/styles.css';
 import store from '../../store';
-import {iniciarJuego, sendMessage, actualizarEstadoJuego} from '../../actionCreators';
+import {iniciarJuego} from '../../actionCreators';
 import {joinSession} from '../../sockets/socketCreator';
 
 /**
@@ -12,21 +12,6 @@ class Session extends Component{
 	constructor(){
 		super();
 		this.onClick = this.onClick.bind(this);
-	}
-
-	onReceived(data){
-		console.log(data);
-		if(data.action === 'message'){
-			store.dispatch(sendMessage(data))
-		}
-		else if(data.action === 'Mover'){
-			console.log("Actualizando el tablero");
-			console.log(data);
-			store.dispatch(actualizarEstadoJuego(data));
-		}
-		else if(data.action === 'Nueva Partida'){
-			store.dispatch(actualizarEstadoJuego(data));
-		}
 	}
 
 	/**
@@ -42,15 +27,13 @@ class Session extends Component{
 			tiempo_espera: this.props.tiempoEspera
 		}
 		// Se crea el socket
-		console.log(this.props.idSesion);
-		let session = joinSession(this.onReceived, this.props.idSesion, store.getState().user_info.nombre);
+		let session = joinSession(this.props.idSesion, store.getState().user_info.nombre);
 		// Se actualiza el store para renderizar la vista
 		// FIXME: iniciar el juego despues de recibir confirmación
 		store.dispatch(iniciarJuego(game_config, session));
 	}
 
 	render(){
-
 		const boxStyle = {
 			background: '#202e3c',
 			borderRadius: '15px',

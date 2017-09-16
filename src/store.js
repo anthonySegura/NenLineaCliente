@@ -7,9 +7,25 @@ const reducer = (state, action) => {
 			playing: true,
 			game_config: action.game_config,
 			session_socket: action.session_socket,
-			messages: []
+			messages: [],
+			openModal: false
 		}
 	}
+	else if(action.type === "CONFIGURAR_SESION"){
+		return{
+			...state,
+			openModal: true,
+			tipoSesion: action.tipo
+		}
+	}
+
+	else if(action.type ===  "CLOSE_MODAL"){
+		return{
+			...state,
+			openModal: false
+		}
+	}
+
 	else if(action.type === "CERRAR_JUEGO"){
 		return{
 			...state,

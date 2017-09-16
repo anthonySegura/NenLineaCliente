@@ -1,7 +1,10 @@
 import Cable from 'actioncable';
+import store from '../store';
+import {sendMessage, actualizarEstadoJuego} from "../actionCreators";
+import soundMessage from './recibido.mp3';
 
 const base_url = 'ws://localhost:3001/cable';
-//  ws://nenlinea-rails.herokuapp.com/cable
+const messageNotification = new Audio(soundMessage);
 
 function sesionListener(onReceived){
 	let cable = Cable.createConsumer(base_url);
@@ -17,7 +20,7 @@ function sesionListener(onReceived){
 	});
 }
 
-function joinSession(onReceived, sesion_id, user){
+function joinSession(sesion_id, user){
 	let cable = Cable.createConsumer(base_url);
 	var sesion = cable.subscriptions.create({
 			channel: 'SesionChannel',
@@ -29,7 +32,19 @@ function joinSession(onReceived, sesion_id, user){
 			console.log('Conexion de invitado a la sesion');
 		},
 		received: (data) => {
-			onReceived(data);
+			console.log(data);
+			if(data.action === 'message'){
+				store.dispatch(sendMessage(data));
+				playMessageSound(data);
+			}
+			else if(data.action === 'Mover'){
+				console.log("Actualizando el tablero");
+				console.log(data);
+				store.dispatch(actualizarEstadoJuego(data));
+			}
+			else if(data.action === 'Nueva Partida'){
+				store.dispatch(actualizarEstadoJuego(data));
+			}
 		},
 		mover: function (columna) {
 			this.perform('mover', {
@@ -48,7 +63,7 @@ function joinSession(onReceived, sesion_id, user){
 }
 
 
-function newSession(onReceived, game_config, user) {
+function newSession(game_config, user) {
 	let cable = Cable.createConsumer(base_url);
 	let sesion = cable.subscriptions.create({
 			channel: 'SesionChannel',
@@ -66,7 +81,19 @@ function newSession(onReceived, game_config, user) {
 			console.log('Nueva sesion. Recibiendo datos');
 		},
 		received: (data) => {
-			onReceived(data);
+			console.log(data);
+			if(data.action === 'message'){
+				store.dispatch(sendMessage(data));
+				playMessageSound(data);
+			}
+			else if(data.action === 'Mover'){
+				console.log("Actualizando el tablero");
+				console.log(data);
+				store.dispatch(actualizarEstadoJuego(data));
+			}
+			else if(data.action === 'Nueva Partida'){
+				store.dispatch(actualizarEstadoJuego(data));
+			}
 		},
 		crearSesion: function(rowSize, nToWin){
 			this.perform('nuevaSesion', {
@@ -88,6 +115,15 @@ function newSession(onReceived, game_config, user) {
 		}
 	});
 	return sesion;
+}
+
+function playMessageSound(data){
+	let user = store.getState().user_info.nombre;
+	console.log(data.send_by);
+	console.log(user);
+	if(data.send_by !== user){
+		messageNotification.play();
+	}
 }
 
 export {sesionListener, joinSession, newSession};

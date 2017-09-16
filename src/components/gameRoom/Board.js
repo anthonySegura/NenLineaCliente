@@ -1,13 +1,19 @@
 import React , {Component} from 'react';
 import Card from './Card';
+import store from '../../store';
 
 import fichaLocal from './resources/circle-dark.svg';
 
 class Board extends Component{
 
+	constructor(){
+		super();
+		this.renderCell = this.renderCell.bind(this);
+	}
+
 	renderCell(fila, columna){
 		return(
-			<Card fila = {fila} columna = {columna} cardImg = {fichaLocal}/>
+			<Card fila = {fila} columna = {columna} cardImg = {fichaLocal} key = {`card_${fila}_${columna}`}/>
 		)
 	}
 
@@ -25,10 +31,10 @@ class Board extends Component{
 
 	render(){
 		return(
-			<div id="connect4">
+			<div id="connect4" className="container-fluid">
 				<table>
 					<tbody>
-					{this.renderRows()}
+						{this.renderRows()}
 					</tbody>
 				</table>
 			</div>

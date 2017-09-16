@@ -15,9 +15,9 @@ class MiddleBox extends Component{
 				<header className="masthead" id="porfolio">
 					<div className="container">
 						<div className="row">
-							<SessionBox image = "img/portfolio/local.svg"/>
-							<SessionBox image = "img/portfolio/remoto.svg"/>
-							<SessionBox image = "img/portfolio/IA.svg"/>
+							<SessionBox image = "img/portfolio/local.svg" tipoSesion = "pvpl"/>
+							<SessionBox image = "img/portfolio/remoto.svg" tipoSesion = "pvpr"/>
+							<SessionBox image = "img/portfolio/IA.svg" tipoSesion = "pvm"/>
 						</div>
 					</div>
 				</header>
