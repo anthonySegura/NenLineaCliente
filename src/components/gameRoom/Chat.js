@@ -81,7 +81,7 @@ class Chat extends Component{
 			paddingRight: '5%',
 			paddingBottom: '10%'
 		}
-
+		if(store.getState().tipoSesion === 'pvm') return null;
 		return(
 			<div style={chatStyle}>
 				<h3 style={{padding: '5%'}}>CHAT</h3>

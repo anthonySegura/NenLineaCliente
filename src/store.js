@@ -1,5 +1,14 @@
 import {createStore} from 'redux';
 
+let initial_state = {
+	playing: false,
+	logged: false,
+	user_info: [],
+	session_socket: null,
+	messages: [],
+	tipoSesion: ''
+};
+
 const reducer = (state, action) => {
 	if(action.type === "INICIAR_JUEGO"){
 		return{
@@ -15,7 +24,7 @@ const reducer = (state, action) => {
 		return{
 			...state,
 			openModal: true,
-			tipoSesion: action.tipo
+			tipoSesion: action.tipoSesion
 		}
 	}
 	else if(action.type ===  "CLOSE_MODAL"){
@@ -59,4 +68,4 @@ const reducer = (state, action) => {
 	}
 }
 
-export default createStore(reducer, {playing: false, logged: false, user_info: [],session_socket: null , messages: []});
+export default createStore(reducer, initial_state);

@@ -61,9 +61,6 @@ class App extends Component {
 						<NavBar/>
 						<div>
 							<GameConfig isOpen={this.state.openModal} onClose={() => false}>
-								<h1>Modal title</h1>
-								<p>hello</p>
-								<p><button onClick={() => {false}}>Close</button></p>
 							</GameConfig>
 							<MiddleBox/>
 						</div>

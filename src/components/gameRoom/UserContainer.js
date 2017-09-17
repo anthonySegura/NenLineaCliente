@@ -7,7 +7,8 @@ class UserContainer extends Component{
 		super();
 		this.state = {
 			background: '',
-			nickname: ''
+			nickname: '',
+			img: ''
 		}
 		this.setBackground = this.setBackground.bind(this);
 	}
@@ -21,14 +22,20 @@ class UserContainer extends Component{
 	setUser(nickname){
 		this.setState({
 			nickname: nickname
-		})
+		});
+	}
+
+	setImg(img){
+		this.setState({
+			img: img
+		});
 	}
 
 	render(){
 
 		const itemStyle = {
-			marginTop: '1%',
-			marginBottom: '1%'
+			marginTop: '2%',
+			marginBottom: '2%'
 		}
 
 		return(
@@ -40,7 +47,7 @@ class UserContainer extends Component{
 						{0}
 					</div>
 					<div className="col-md-4" style={itemStyle}>
-						<img src = {this.props.img} alt = "" height={25} width={25}/>
+						<img src = {(this.state.img === '')? this.props.img : this.state.img} alt = "" height={25} width={25}/>
 					</div>
 				</div>
 		)

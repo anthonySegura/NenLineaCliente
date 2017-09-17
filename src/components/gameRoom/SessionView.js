@@ -6,6 +6,7 @@ import Chat from './Chat';
 import UserContainer from './UserContainer';
 import fichaLocal from './resources/circle-light.svg';
 import fichaRival from './resources/circle-dark.svg';
+import fichaIA from './resources/HAL9000.svg';
 
 import store from '../../store';
 import 'react-notifications/lib/notifications.css';
@@ -21,12 +22,14 @@ class SessionView extends Component{
 			game_config: store.getState().game_config
 		}
 
+		// Se suscribe el componente al store global. Escucha los cambios al estado del juego para actualizar la vista
 		store.subscribe(() => {
 
 			const local = store.getState().user_info.nombre;
 			const fondoEspera = '#29666D';
 			const fondoTurno = '#cd5c5c';
 
+			if(store.getState().game_state === undefined) return;
 			// Se actualiza el indicador de turno
 			if(store.getState().game_state.turno === local){
 				this.refs.local.setBackground(fondoTurno);
@@ -43,6 +46,9 @@ class SessionView extends Component{
 				const rival = store.getState().game_state.rival;
 				this.state.game_config.rival = rival;
 				this.refs.rival.setUser(rival);
+				if(store.getState().game_state.rival === 'CPU'){
+					this.refs.rival.setImg(fichaIA);
+				}
 				NotificationManager.info(`${rival} se ha unido a la sesión`);
 			}
 		});

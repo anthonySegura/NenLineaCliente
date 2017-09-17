@@ -8,6 +8,7 @@ import fichaRivalWinner from './resources/circle-light-winner.svg';
 import fichaWinner from './resources/circle-dark-winner.svg';
 
 class Card extends Component{
+
 	constructor() {
 		super();
 		this.state = {
@@ -35,6 +36,7 @@ class Card extends Component{
 	putCard(row, column){
 		// Verifica si la posicion es la de esta ficha
 		if (row === this.props.fila && column === this.props.columna) {
+			//let Rival = (store.getState().game_config.rival === 'CPU') ? fichaCPU : fichaRival;
 			let ficha = (store.getState().game_state.turno === store.getState().user_info.nombre) ? this.props.cardImg : fichaRival;
 			this.setState({
 				img: ficha

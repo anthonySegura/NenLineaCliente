@@ -115,13 +115,56 @@ function newSession(game_config, user) {
 	return sesion;
 }
 
+function sessionIA(game_config, user){
+	let cable = Cable.createConsumer(base_url);
+	let sesion = cable.subscriptions.create({
+		channel: 'SesionChannel',
+		// FIXME: cambiar por el nombre del usuario
+		user_id: user,
+		command: 'IA',
+		user: user,
+		tamFila: game_config.tamFila,
+		tamTablero: game_config.tamTablero,
+		n2win: game_config.n2win,
+		n_partidas: game_config.n_partidas,
+		tipo: game_config.tipo
+	}, {
+		connected: () => {
+			console.log('Nueva sesion. Recibiendo datos');
+		},
+		received: (data) => {
+			console.log(data);
+			if(data.action === 'message'){
+				store.dispatch(sendMessage(data));
+				playMessageSound(data);
+			}
+			else if(data.action === 'Mover'){
+				store.dispatch(actualizarEstadoJuego(data));
+			}
+			else if(data.action === 'Nueva Partida'){
+				store.dispatch(actualizarEstadoJuego(data));
+			}
+		},
+		mover: function (columna) {
+			this.perform('moverIA', {
+				columna: columna
+			});
+		},
+		enviarMensaje: function (message, name) {
+			this.perform('enviarMensaje',{
+				message: message,
+				send_by: name
+			});
+		}
+	});
+	return sesion;
+}
+
 function playMessageSound(data){
 	let user = store.getState().user_info.nombre;
-	console.log(data.send_by);
-	console.log(user);
 	if(data.send_by !== user){
 		messageNotification.play();
 	}
 }
 
-export {sesionListener, joinSession, newSession};
+export {sesionListener, joinSession, newSession, sessionIA};

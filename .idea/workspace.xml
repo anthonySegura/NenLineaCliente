@@ -2,15 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ced83ff6-0a22-402e-83f7-ec5478c14643" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.vscode/launch.json" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/App.js" afterPath="$PROJECT_DIR$/src/App.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/gameRoom/Card.js" afterPath="$PROJECT_DIR$/src/components/gameRoom/Card.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/gameRoom/Chat.js" afterPath="$PROJECT_DIR$/src/components/gameRoom/Chat.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/gameRoom/SessionView.js" afterPath="$PROJECT_DIR$/src/components/gameRoom/SessionView.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/gameRoom/UserContainer.js" afterPath="$PROJECT_DIR$/src/components/gameRoom/UserContainer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/gameRoom/resources/styles.css" afterPath="$PROJECT_DIR$/src/components/gameRoom/resources/styles.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/gameRoom/resources/HAL9000.svg" afterPath="$PROJECT_DIR$/src/components/gameRoom/resources/HAL9000.svg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/middleContent/GameConfig.js" afterPath="$PROJECT_DIR$/src/components/middleContent/GameConfig.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/sessionsList/Session.js" afterPath="$PROJECT_DIR$/src/components/sessionsList/Session.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/sessionsList/SessionsArea.js" afterPath="$PROJECT_DIR$/src/components/sessionsList/SessionsArea.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sockets/socketCreator.js" afterPath="$PROJECT_DIR$/src/sockets/socketCreator.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/store.js" afterPath="$PROJECT_DIR$/src/store.js" />
     </list>
@@ -35,8 +36,8 @@
       <file leaf-file-name="actionCreators.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/actionCreators.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="267">
-              <caret line="46" column="45" lean-forward="false" selection-start-line="46" selection-start-column="45" selection-end-line="46" selection-end-column="45" />
+            <state relative-caret-position="1104">
+              <caret line="46" column="6" lean-forward="false" selection-start-line="46" selection-start-column="6" selection-end-line="46" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -45,11 +46,9 @@
       <file leaf-file-name="UserContainer.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/gameRoom/UserContainer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="840">
-              <caret line="41" column="54" lean-forward="false" selection-start-line="41" selection-start-column="54" selection-end-line="41" selection-end-column="54" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="264">
+              <caret line="12" column="7" lean-forward="false" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -57,8 +56,8 @@
       <file leaf-file-name="socketCreator.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sockets/socketCreator.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="6" column="52" lean-forward="false" selection-start-line="6" selection-start-column="52" selection-end-line="6" selection-end-column="52" />
+            <state relative-caret-position="3195">
+              <caret line="149" column="24" lean-forward="true" selection-start-line="149" selection-start-column="24" selection-end-line="149" selection-end-column="24" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -66,77 +65,39 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="styles.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/gameRoom/resources/styles.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-240">
-              <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SessionsArea.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/sessionsList/SessionsArea.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="25" column="29" lean-forward="false" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/package.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="11" column="28" lean-forward="false" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
-              <folding>
-                <marker date="1505599980988" expanded="true" signature="85:360" ph="{&quot;actioncable&quot;: &quot;^5.1.4&quot;...}" />
-                <marker date="1505599980988" expanded="true" signature="375:733" ph="{&quot;start&quot;: &quot;react-scripts start &amp;&amp; cp manifest.json build/ &amp;&amp; sw-precache --root = 'build/' --static-file-globs='build/**/!(*map*)'&quot;...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SessionView.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SessionView.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/gameRoom/SessionView.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="45" column="66" lean-forward="false" selection-start-line="45" selection-start-column="66" selection-end-line="45" selection-end-column="66" />
+            <state relative-caret-position="67">
+              <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
-                <marker date="1505600791209" expanded="true" signature="1654:2236" ph="..." />
-                <marker date="1505600791209" expanded="true" signature="1696:2222" ph="..." />
-                <marker date="1505600791209" expanded="false" signature="1717:1729" ph="..." />
-                <marker date="1505600791209" expanded="true" signature="1729:2209" ph="..." />
-                <marker date="1505600791209" expanded="true" signature="1817:2203" ph="..." />
-                <marker date="1505600791209" expanded="false" signature="1892:1905" ph="..." />
-                <marker date="1505600791209" expanded="true" signature="1951:2182" ph="..." />
-                <marker date="1505600791209" expanded="true" signature="2053:2176" ph="..." />
-                <marker date="1505600791209" expanded="true" signature="2150:2176" ph="..." />
+                <marker date="1505668969526" expanded="true" signature="1968:2550" ph="..." />
+                <marker date="1505668969526" expanded="true" signature="2010:2536" ph="..." />
+                <marker date="1505668969526" expanded="true" signature="2031:2043" ph="..." />
+                <marker date="1505668969526" expanded="true" signature="2043:2523" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="serverRequests.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/serverRequests.js">
+      <file leaf-file-name="GameConfig.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/middleContent/GameConfig.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="5" column="86" lean-forward="true" selection-start-line="5" selection-start-column="86" selection-end-line="5" selection-end-column="87" />
-              <folding />
+            <state relative-caret-position="-216">
+              <caret line="30" column="39" lean-forward="false" selection-start-line="30" selection-start-column="39" selection-end-line="30" selection-end-column="39" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="store.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/store.js">
+      <file leaf-file-name="SessionBox.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/middleContent/SessionBox.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="411">
-              <caret line="57" column="5" lean-forward="false" selection-start-line="57" selection-start-column="5" selection-end-line="57" selection-end-column="5" />
+            <state relative-caret-position="504">
+              <caret line="25" column="25" lean-forward="true" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -145,11 +106,43 @@
       <file leaf-file-name="Card.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/gameRoom/Card.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1824">
-              <caret line="76" column="49" lean-forward="false" selection-start-line="76" selection-start-column="49" selection-end-line="76" selection-end-column="49" />
+            <state relative-caret-position="-96">
+              <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
               <folding>
                 <element signature="e#1#40#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Chat.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/gameRoom/Chat.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="24">
+              <caret line="83" column="57" lean-forward="false" selection-start-line="83" selection-start-column="57" selection-end-line="83" selection-end-column="57" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MiddleBox.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/middleContent/MiddleBox.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="store.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/store.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="264">
+              <caret line="11" column="36" lean-forward="true" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -228,7 +221,6 @@
         <option value="$PROJECT_DIR$/src/components/NavBar.js" />
         <option value="$PROJECT_DIR$/src/components/middleContent/MiddleArea.js" />
         <option value="$PROJECT_DIR$/public/js/freelancer.js" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/components/welcomePage/welcome.js" />
         <option value="$PROJECT_DIR$/public/manifest.json" />
         <option value="$PROJECT_DIR$/src/registerServiceWorker.js" />
@@ -241,24 +233,25 @@
         <option value="$PROJECT_DIR$/src/components/navbar/NavItem.js" />
         <option value="$PROJECT_DIR$/src/serverRequests.js" />
         <option value="$PROJECT_DIR$/src/components/welcomePage/Welcome.js" />
-        <option value="$PROJECT_DIR$/src/components/gameRoom/Chat.js" />
         <option value="$PROJECT_DIR$/src/components/gameRoom/Board.js" />
         <option value="$PROJECT_DIR$/public/css/freelancer.css" />
-        <option value="$PROJECT_DIR$/src/App.js" />
-        <option value="$PROJECT_DIR$/src/components/middleContent/SessionBox.js" />
         <option value="$PROJECT_DIR$/src/components/middleContent/MiddleBox.js" />
         <option value="$PROJECT_DIR$/src/components/navbar/NavBar.js" />
         <option value="$PROJECT_DIR$/src/components/sessionsList/Session.js" />
-        <option value="$PROJECT_DIR$/src/components/middleContent/GameConfig.js" />
         <option value="$PROJECT_DIR$/src/actionCreators.js" />
-        <option value="$PROJECT_DIR$/src/store.js" />
-        <option value="$PROJECT_DIR$/src/sockets/socketCreator.js" />
-        <option value="$PROJECT_DIR$/src/components/gameRoom/UserContainer.js" />
         <option value="$PROJECT_DIR$/src/components/gameRoom/resources/styles.css" />
         <option value="$PROJECT_DIR$/src/components/sessionsList/SessionsArea.js" />
         <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/src/App.js" />
+        <option value="$PROJECT_DIR$/src/components/middleContent/SessionBox.js" />
+        <option value="$PROJECT_DIR$/src/store.js" />
+        <option value="$PROJECT_DIR$/src/components/gameRoom/UserContainer.js" />
+        <option value="$PROJECT_DIR$/src/sockets/socketCreator.js" />
         <option value="$PROJECT_DIR$/src/components/gameRoom/Card.js" />
         <option value="$PROJECT_DIR$/src/components/gameRoom/SessionView.js" />
+        <option value="$PROJECT_DIR$/src/components/gameRoom/Chat.js" />
+        <option value="$PROJECT_DIR$/src/components/middleContent/GameConfig.js" />
       </list>
     </option>
   </component>
@@ -296,7 +289,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -345,22 +337,7 @@
               <item name="n-en-linea" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="gameRoom" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="n-en-linea" type="b2602c69:ProjectViewProjectNode" />
-              <item name="n-en-linea" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="middleContent" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="n-en-linea" type="b2602c69:ProjectViewProjectNode" />
-              <item name="n-en-linea" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="navbar" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="n-en-linea" type="b2602c69:ProjectViewProjectNode" />
@@ -386,6 +363,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -451,12 +429,13 @@
       <workItem from="1505402111120" duration="41462000" />
       <workItem from="1505486328849" duration="14958000" />
       <workItem from="1505517508095" duration="14947000" />
-      <workItem from="1505578865560" duration="17352000" />
+      <workItem from="1505578865560" duration="32878000" />
+      <workItem from="1505662581907" duration="6235000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="259269000" />
+    <option name="totallyTimeSpent" value="281030000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -468,17 +447,17 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1366" height="768" extended-state="6" />
+    <frame x="0" y="0" width="1368" height="772" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16753536" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.54489166" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921174" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32886904" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298585" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32886904" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34621328" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34621328" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -557,7 +536,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="600">
           <caret line="28" column="13" lean-forward="true" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -586,13 +564,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1152">
           <caret line="48" column="7" lean-forward="false" selection-start-line="48" selection-start-column="7" selection-end-line="48" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="21" column="25" lean-forward="true" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -641,45 +612,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="uml://JavaScript-modules-diagram//home/anthony/WebstormProjects/n-en-linea/src">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JavaScript-modules-diagram</ID>
-          <OriginalElement>$PROJECT_DIR$/src</OriginalElement>
-          <nodes>
-            <node x="" y="">$PROJECT_DIR$/src/App.js#Component#16;/home/anthony/WebstormProjects/n-en-linea/src/App.js#MiddleBox#101;/home/anthony/WebstormProjects/n-en-linea/src/App.js#NavBar#49;/home/anthony/WebstormProjects/n-en-linea/src/App.js#React#7;/home/anthony/WebstormProjects/n-en-linea/src/App.js#SessionView#295;/home/anthony/WebstormProjects/n-en-linea/src/App.js#SessionsArea#166;/home/anthony/WebstormProjects/n-en-linea/src/App.js#Welcome#236;</node>
-            <node x="" y="">$PROJECT_DIR$/src/App.test.js#App#68;/home/anthony/WebstormProjects/n-en-linea/src/App.test.js#React#7;/home/anthony/WebstormProjects/n-en-linea/src/App.test.js#ReactDOM#34;</node>
-            <node x="" y="">$PROJECT_DIR$/src/components/gameRoom/Board.js#Component#16;/home/anthony/WebstormProjects/n-en-linea/src/components/gameRoom/Board.js#React#7;/home/anthony/WebstormProjects/n-en-linea/src/components/gameRoom/Board.js#ficha#48;</node>
-            <node x="" y="">$PROJECT_DIR$/src/components/middleContent/MiddleBox.js#Component#15;/home/anthony/WebstormProjects/n-en-linea/src/components/middleContent/MiddleBox.js#React#7;/home/anthony/WebstormProjects/n-en-linea/src/components/middleContent/MiddleBox.js#SessionBox#47;</node>
-            <node x="" y="">$PROJECT_DIR$/src/components/navbar/NavBar.js#Component#15;/home/anthony/WebstormProjects/n-en-linea/src/components/navbar/NavBar.js#NavItem#47;/home/anthony/WebstormProjects/n-en-linea/src/components/navbar/NavBar.js#React#7;</node>
-            <node x="" y="">$PROJECT_DIR$/src/components/navbar/NavItem.js#Component#15;/home/anthony/WebstormProjects/n-en-linea/src/components/navbar/NavItem.js#React#7;</node>
-            <node x="" y="">$PROJECT_DIR$/src/components/sessionsList/Session.js#Component#15;/home/anthony/WebstormProjects/n-en-linea/src/components/sessionsList/Session.js#React#7;</node>
-            <node x="" y="">$PROJECT_DIR$/src/components/middleContent/SessionBox.js#Component#15;/home/anthony/WebstormProjects/n-en-linea/src/components/middleContent/SessionBox.js#React#7;</node>
-            <node x="" y="">$PROJECT_DIR$/src/components/gameRoom/SessionView.js#Board#80;/home/anthony/WebstormProjects/n-en-linea/src/components/gameRoom/SessionView.js#Component#15;/home/anthony/WebstormProjects/n-en-linea/src/components/gameRoom/SessionView.js#React#7;/home/anthony/WebstormProjects/n-en-linea/src/components/gameRoom/SessionView.js#styles.css#40;</node>
-            <node x="" y="">$PROJECT_DIR$/src/components/sessionsList/SessionsArea.js#Component#15;/home/anthony/WebstormProjects/n-en-linea/src/components/sessionsList/SessionsArea.js#React#7;/home/anthony/WebstormProjects/n-en-linea/src/components/sessionsList/SessionsArea.js#Session#47;</node>
-            <node x="" y="">$PROJECT_DIR$/src/components/welcomePage/Welcome.js#Component#15;/home/anthony/WebstormProjects/n-en-linea/src/components/welcomePage/Welcome.js#GoogleLogin#47;/home/anthony/WebstormProjects/n-en-linea/src/components/welcomePage/Welcome.js#React#7;</node>
-            <node x="" y="">$PROJECT_DIR$/src/components/gameRoom/resources/circle-placeholder-bright.svg</node>
-            <node x="" y="">$PROJECT_DIR$/src/index.css</node>
-            <node x="" y="">$PROJECT_DIR$/node_modules/@types/react/index.d.ts</node>
-            <node x="" y="">$PROJECT_DIR$/node_modules/react-google-login/index.d.ts</node>
-            <node x="" y="">$PROJECT_DIR$/src/index.js#App#90;/home/anthony/WebstormProjects/n-en-linea/src/index.js#React#7;/home/anthony/WebstormProjects/n-en-linea/src/index.js#ReactDOM#34;/home/anthony/WebstormProjects/n-en-linea/src/index.js#index.css#61;</node>
-            <node x="" y="">$PROJECT_DIR$/node_modules/react-dom/index.js</node>
-            <node x="" y="">$PROJECT_DIR$/node_modules/react/react.js</node>
-            <node x="" y="">$PROJECT_DIR$/src/components/gameRoom/resources/styles.css</node>
-            <node x="" y="">Component;</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="0.8088183421516755" x="607.0" y="347.0" />
-          <SelectedNodes />
-          <Categories>
-            <Category>All</Category>
-          </Categories>
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>Details</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/mediaQueries/styles.scss" />
     <entry file="file://$PROJECT_DIR$/src/mediaQueries/MediaQuery.js" />
     <entry file="file://$PROJECT_DIR$/public/manifest.json">
@@ -708,7 +640,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -719,36 +650,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/gameRoom/Chat.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2304">
-          <caret line="97" column="68" lean-forward="false" selection-start-line="97" selection-start-column="28" selection-end-line="97" selection-end-column="68" />
-          <folding>
-            <element signature="e#0#39#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/middleContent/MiddleBox.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="17" column="21" lean-forward="true" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2040">
-          <caret line="95" column="12" lean-forward="true" selection-start-line="95" selection-start-column="12" selection-end-line="95" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/welcomePage/Welcome.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
           <caret line="33" column="40" lean-forward="true" selection-start-line="30" selection-start-column="6" selection-end-line="33" selection-end-column="40" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -756,17 +661,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="456">
           <caret line="28" column="17" lean-forward="true" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#39#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/middleContent/SessionBox.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="31" column="32" lean-forward="false" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -774,43 +668,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
           <caret line="26" column="45" lean-forward="true" selection-start-line="26" selection-start-column="45" selection-end-line="26" selection-end-column="45" />
-          <folding>
-            <element signature="e#0#39#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/middleContent/GameConfig.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="32" column="31" lean-forward="false" selection-start-line="32" selection-start-column="31" selection-end-line="32" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/store.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="411">
-          <caret line="57" column="5" lean-forward="false" selection-start-line="57" selection-start-column="5" selection-end-line="57" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/actionCreators.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="46" column="45" lean-forward="false" selection-start-line="46" selection-start-column="45" selection-end-line="46" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/gameRoom/UserContainer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
-          <caret line="41" column="54" lean-forward="false" selection-start-line="41" selection-start-column="54" selection-end-line="41" selection-end-column="54" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -818,7 +675,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -826,15 +682,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-144">
           <caret line="87" column="52" lean-forward="false" selection-start-line="87" selection-start-column="52" selection-end-line="87" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/gameRoom/resources/styles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-240">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -842,40 +689,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="11" column="28" lean-forward="false" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
-          <folding>
-            <marker date="1505599980988" expanded="true" signature="85:360" ph="{&quot;actioncable&quot;: &quot;^5.1.4&quot;...}" />
-            <marker date="1505599980988" expanded="true" signature="375:733" ph="{&quot;start&quot;: &quot;react-scripts start &amp;&amp; cp manifest.json build/ &amp;&amp; sw-precache --root = 'build/' --static-file-globs='build/**/!(*map*)'&quot;...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/sessionsList/SessionsArea.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="25" column="29" lean-forward="false" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/gameRoom/Card.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1824">
-          <caret line="76" column="49" lean-forward="false" selection-start-line="76" selection-start-column="49" selection-end-line="76" selection-end-column="49" />
-          <folding>
-            <element signature="e#1#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sockets/socketCreator.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="6" column="52" lean-forward="false" selection-start-line="6" selection-start-column="52" selection-end-line="6" selection-end-column="52" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -883,25 +696,185 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="5" column="86" lean-forward="true" selection-start-line="5" selection-start-column="86" selection-end-line="5" selection-end-column="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="576">
+          <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JavaScript-modules-diagram//home/anthony/WebstormProjects/n-en-linea/src">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JavaScript-modules-diagram</ID>
+          <OriginalElement>$PROJECT_DIR$/src</OriginalElement>
+          <nodes>
+            <node x="" y="">$PROJECT_DIR$/src/App.js#Component#16;/home/anthony/WebstormProjects/n-en-linea/src/App.js#GameConfig#166;/home/anthony/WebstormProjects/n-en-linea/src/App.js#MiddleBox#101;/home/anthony/WebstormProjects/n-en-linea/src/App.js#NavBar#49;/home/anthony/WebstormProjects/n-en-linea/src/App.js#Notifications#427;/home/anthony/WebstormProjects/n-en-linea/src/App.js#React#7;/home/anthony/WebstormProjects/n-en-linea/src/App.js#SessionView#362;/home/anthony/WebstormProjects/n-en-linea/src/App.js#SessionsArea#233;/home/anthony/WebstormProjects/n-en-linea/src/App.js#Welcome#303;/home/anthony/WebstormProjects/n-en-linea/src/App.js#login#515;/home/anthony/WebstormProjects/n-en-linea/src/App.js#notify#443;/home/anthony/WebstormProjects/n-en-linea/src/App.js#store#485;</node>
+            <node x="" y="">$PROJECT_DIR$/src/App.test.js#App#68;/home/anthony/WebstormProjects/n-en-linea/src/App.test.js#React#7;/home/anthony/WebstormProjects/n-en-linea/src/App.test.js#ReactDOM#34;</node>
+            <node x="" y="">$PROJECT_DIR$/src/components/gameRoom/Board.js#Card#48;/home/anthony/WebstormProjects/n-en-linea/src/components/gameRoom/Board.js#Component#16;/home/anthony/WebstormProjects/n-en-linea/src/components/gameRoom/Board.js#React#7;/home/anthony/WebstormProjects/n-en-linea/src/components/gameRoom/Board.js#fichaLocal#109;/home/anthony/WebstormProjects/n-en-linea/src/components/gameRoom/Board.js#store#75;</node>
+            <node x="" y="">$PROJECT_DIR$/src/components/gameRoom/Card.js#Component#16;/home/anthony/WebstormProjects/n-en-linea/src/components/gameRoom/Card.js#React#8;/home/anthony/WebstormProjects/n-en-linea/src/components/gameRoom/Card.js#backgroundImg#82;/home/anthony/WebstormProjects/n-en-linea/src/components/gameRoom/Card.js#fichaRival#153;/home/anthony/WebstormProjects/n-en-linea/src/components/gameRoom/Card.js#fichaRivalWinner#208;/home/anthony/WebstormProjects/n-en-linea/src/components/gameRoom/Card.js#fichaWinner#276;/home/anthony/WebstormProjects/n-en-linea/src/components/gameRoom/Card.js#store#48;</node>
+            <node x="" y="">$PROJECT_DIR$/src/components/gameRoom/Chat.js#Component#15;/home/anthony/WebstormProjects/n-en-linea/src/components/gameRoom/Chat.js#React#7;/home/anthony/WebstormProjects/n-en-linea/src/components/gameRoom/Chat.js#store#47;</node>
+            <node x="" y="">$PROJECT_DIR$/src/components/middleContent/GameConfig.js#Component#15;/home/anthony/WebstormProjects/n-en-linea/src/components/middleContent/GameConfig.js#React#7;/home/anthony/WebstormProjects/n-en-linea/src/components/middleContent/GameConfig.js#closeModal#81;/home/anthony/WebstormProjects/n-en-linea/src/components/middleContent/GameConfig.js#iniciarJuego#93;/home/anthony/WebstormProjects/n-en-linea/src/components/middleContent/GameConfig.js#newSession#144;/home/anthony/WebstormProjects/n-en-linea/src/components/middleContent/GameConfig.js#store#47;/home/anthony/WebstormProjects/n-en-linea/src/components/middleContent/GameConfig.js#validarUsuario#200;</node>
+            <node x="" y="">$PROJECT_DIR$/src/components/middleContent/MiddleBox.js#Component#15;/home/anthony/WebstormProjects/n-en-linea/src/components/middleContent/MiddleBox.js#React#7;/home/anthony/WebstormProjects/n-en-linea/src/components/middleContent/MiddleBox.js#SessionBox#47;</node>
+            <node x="" y="">$PROJECT_DIR$/src/components/navbar/NavBar.js#Component#15;/home/anthony/WebstormProjects/n-en-linea/src/components/navbar/NavBar.js#NavItem#47;/home/anthony/WebstormProjects/n-en-linea/src/components/navbar/NavBar.js#React#7;/home/anthony/WebstormProjects/n-en-linea/src/components/navbar/NavBar.js#cerrarJuego#117;/home/anthony/WebstormProjects/n-en-linea/src/components/navbar/NavBar.js#store#83;</node>
+            <node x="" y="">$PROJECT_DIR$/src/components/navbar/NavItem.js#Component#15;/home/anthony/WebstormProjects/n-en-linea/src/components/navbar/NavItem.js#React#7;</node>
+            <node x="" y="">$PROJECT_DIR$/src/components/sessionsList/Session.js#Component#15;/home/anthony/WebstormProjects/n-en-linea/src/components/sessionsList/Session.js#React#7;/home/anthony/WebstormProjects/n-en-linea/src/components/sessionsList/Session.js#iniciarJuego#124;/home/anthony/WebstormProjects/n-en-linea/src/components/sessionsList/Session.js#joinSession#175;/home/anthony/WebstormProjects/n-en-linea/src/components/sessionsList/Session.js#store#90;/home/anthony/WebstormProjects/n-en-linea/src/components/sessionsList/Session.js#styles.css#40;</node>
+            <node x="" y="">$PROJECT_DIR$/src/components/middleContent/SessionBox.js#Component#15;/home/anthony/WebstormProjects/n-en-linea/src/components/middleContent/SessionBox.js#GameConfig#198;/home/anthony/WebstormProjects/n-en-linea/src/components/middleContent/SessionBox.js#React#7;/home/anthony/WebstormProjects/n-en-linea/src/components/middleContent/SessionBox.js#iniciarJuego#81;/home/anthony/WebstormProjects/n-en-linea/src/components/middleContent/SessionBox.js#newSession#143;/home/anthony/WebstormProjects/n-en-linea/src/components/middleContent/SessionBox.js#openModal#95;/home/anthony/WebstormProjects/n-en-linea/src/components/middleContent/SessionBox.js#store#47;</node>
+            <node x="" y="">$PROJECT_DIR$/src/components/gameRoom/SessionView.js#Board#80;/home/anthony/WebstormProjects/n-en-linea/src/components/gameRoom/SessionView.js#Chat#160;/home/anthony/WebstormProjects/n-en-linea/src/components/gameRoom/SessionView.js#Col#124;/home/anthony/WebstormProjects/n-en-linea/src/components/gameRoom/SessionView.js#Component#15;/home/anthony/WebstormProjects/n-en-linea/src/components/gameRoom/SessionView.js#Grid#113;/home/anthony/WebstormProjects/n-en-linea/src/components/gameRoom/SessionView.js#NotificationContainer#428;/home/anthony/WebstormProjects/n-en-linea/src/components/gameRoom/SessionView.js#NotificationManager#451;/home/anthony/WebstormProjects/n-en-linea/src/components/gameRoom/SessionView.js#React#7;/home/anthony/WebstormProjects/n-en-linea/src/components/gameRoom/SessionView.js#Row#119;/home/anthony/WebstormProjects/n-en-linea/src/components/gameRoom/SessionView.js#UserContainer#187;/home/anthony/WebstormProjects/n-en-linea/src/components/gameRoom/SessionView.js#fichaLocal#232;/home/anthony/WebstormProjects/n-en-linea/src/components/gameRoom/SessionView.js#fichaRival#287;/home/anthony/WebstormProjects/n-en-linea/src/components/gameRoom/SessionView.js#notifications.css#368;/home/anthony/WebstormProjects/n-en-linea/src/components/gameRoom/SessionView.js#store#342;/home/anthony/WebstormProjects/n-en-linea/src/components/gameRoom/SessionView.js#styles.css#40;</node>
+            <node x="" y="">$PROJECT_DIR$/src/components/sessionsList/SessionsArea.js#Component#15;/home/anthony/WebstormProjects/n-en-linea/src/components/sessionsList/SessionsArea.js#React#7;/home/anthony/WebstormProjects/n-en-linea/src/components/sessionsList/SessionsArea.js#Session#47;/home/anthony/WebstormProjects/n-en-linea/src/components/sessionsList/SessionsArea.js#sesionListener#84;</node>
+            <node x="" y="">$PROJECT_DIR$/src/components/gameRoom/UserContainer.js#Component#15;/home/anthony/WebstormProjects/n-en-linea/src/components/gameRoom/UserContainer.js#React#7;/home/anthony/WebstormProjects/n-en-linea/src/components/gameRoom/UserContainer.js#styles.css#40;</node>
+            <node x="" y="">$PROJECT_DIR$/src/components/welcomePage/Welcome.js#Component#15;/home/anthony/WebstormProjects/n-en-linea/src/components/welcomePage/Welcome.js#GoogleLogin#47;/home/anthony/WebstormProjects/n-en-linea/src/components/welcomePage/Welcome.js#React#7;/home/anthony/WebstormProjects/n-en-linea/src/components/welcomePage/Welcome.js#login#128;/home/anthony/WebstormProjects/n-en-linea/src/components/welcomePage/Welcome.js#store#93;/home/anthony/WebstormProjects/n-en-linea/src/components/welcomePage/Welcome.js#validarUsuario#172;</node>
+            <node x="" y="">$PROJECT_DIR$/src/actionCreators.js#actualizarEstadoJuego#700;/home/anthony/WebstormProjects/n-en-linea/src/actionCreators.js#cerrarJuego#413;/home/anthony/WebstormProjects/n-en-linea/src/actionCreators.js#closeModal#99;/home/anthony/WebstormProjects/n-en-linea/src/actionCreators.js#iniciarJuego#163;/home/anthony/WebstormProjects/n-en-linea/src/actionCreators.js#login#522;/home/anthony/WebstormProjects/n-en-linea/src/actionCreators.js#openModal#6;/home/anthony/WebstormProjects/n-en-linea/src/actionCreators.js#sendMessage#617;</node>
+            <node x="" y="">$PROJECT_DIR$/node_modules/actioncable/lib/assets/compiled/action_cable.js</node>
+            <node x="" y="">$PROJECT_DIR$/src/components/gameRoom/resources/circle-dark-winner.svg</node>
+            <node x="" y="">$PROJECT_DIR$/src/components/gameRoom/resources/circle-dark.svg</node>
+            <node x="" y="">$PROJECT_DIR$/src/components/gameRoom/resources/circle-light-winner.svg</node>
+            <node x="" y="">$PROJECT_DIR$/src/components/gameRoom/resources/circle-light.svg</node>
+            <node x="" y="">$PROJECT_DIR$/src/components/gameRoom/resources/circle-placeholder-bright.svg</node>
+            <node x="" y="">$PROJECT_DIR$/src/index.css</node>
+            <node x="" y="">$PROJECT_DIR$/node_modules/@types/react/index.d.ts</node>
+            <node x="" y="">$PROJECT_DIR$/node_modules/react-google-login/index.d.ts</node>
+            <node x="" y="">$PROJECT_DIR$/node_modules/redux/index.d.ts#createStore#10782;</node>
+            <node x="" y="">$PROJECT_DIR$/src/index.js#App#90;/home/anthony/WebstormProjects/n-en-linea/src/index.js#React#7;/home/anthony/WebstormProjects/n-en-linea/src/index.js#ReactDOM#34;/home/anthony/WebstormProjects/n-en-linea/src/index.js#index.css#61;</node>
+            <node x="" y="">NotificationContainer;NotificationManager;</node>
+            <node x="" y="">$PROJECT_DIR$/node_modules/react-dom/index.js</node>
+            <node x="" y="">$PROJECT_DIR$/node_modules/react-bootstrap/es/index.js#Col#1100;/home/anthony/WebstormProjects/n-en-linea/node_modules/react-bootstrap/es/index.js#Grid#1725;/home/anthony/WebstormProjects/n-en-linea/node_modules/react-bootstrap/es/index.js#Row#4112;</node>
+            <node x="" y="">$PROJECT_DIR$/node_modules/react-notifications/lib/notifications.css</node>
+            <node x="" y="">notify;</node>
+            <node x="" y="">$PROJECT_DIR$/node_modules/react/react.js</node>
+            <node x="" y="">$PROJECT_DIR$/src/sockets/recibido.mp3</node>
+            <node x="" y="">$PROJECT_DIR$/src/serverRequests.js#validarUsuario#470;</node>
+            <node x="" y="">$PROJECT_DIR$/src/sockets/socketCreator.js#Cable#7;/home/anthony/WebstormProjects/n-en-linea/src/sockets/socketCreator.js#actualizarEstadoJuego#84;/home/anthony/WebstormProjects/n-en-linea/src/sockets/socketCreator.js#joinSession#594;/home/anthony/WebstormProjects/n-en-linea/src/sockets/socketCreator.js#newSession#1586;/home/anthony/WebstormProjects/n-en-linea/src/sockets/socketCreator.js#sendMessage#71;/home/anthony/WebstormProjects/n-en-linea/src/sockets/socketCreator.js#sesionListener#277;/home/anthony/WebstormProjects/n-en-linea/src/sockets/socketCreator.js#soundMessage#140;/home/anthony/WebstormProjects/n-en-linea/src/sockets/socketCreator.js#store#40;</node>
+            <node x="" y="">$PROJECT_DIR$/src/store.js#createStore#8;</node>
+            <node x="" y="">$PROJECT_DIR$/src/components/gameRoom/resources/styles.css</node>
+            <node x="" y="">Component;</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="0.39498977505112476" x="1357.0" y="976.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>All</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>Details</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/sessionsList/SessionsArea.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="25" column="29" lean-forward="false" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/gameRoom/resources/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-240">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="65" column="18" lean-forward="true" selection-start-line="65" selection-start-column="18" selection-end-line="65" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/middleContent/SessionBox.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="25" column="25" lean-forward="true" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/middleContent/MiddleBox.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/actionCreators.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1104">
+          <caret line="46" column="6" lean-forward="false" selection-start-line="46" selection-start-column="6" selection-end-line="46" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/gameRoom/UserContainer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="12" column="7" lean-forward="false" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="11" column="36" lean-forward="true" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sockets/socketCreator.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3195">
+          <caret line="149" column="24" lean-forward="true" selection-start-line="149" selection-start-column="24" selection-end-line="149" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/gameRoom/Card.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-96">
+          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding>
+            <element signature="e#1#40#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/gameRoom/SessionView.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="45" column="66" lean-forward="false" selection-start-line="45" selection-start-column="66" selection-end-line="45" selection-end-column="66" />
+        <state relative-caret-position="67">
+          <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
-            <marker date="1505600791209" expanded="true" signature="1654:2236" ph="..." />
-            <marker date="1505600791209" expanded="true" signature="1696:2222" ph="..." />
-            <marker date="1505600791209" expanded="false" signature="1717:1729" ph="..." />
-            <marker date="1505600791209" expanded="true" signature="1729:2209" ph="..." />
-            <marker date="1505600791209" expanded="true" signature="1817:2203" ph="..." />
-            <marker date="1505600791209" expanded="false" signature="1892:1905" ph="..." />
-            <marker date="1505600791209" expanded="true" signature="1951:2182" ph="..." />
-            <marker date="1505600791209" expanded="true" signature="2053:2176" ph="..." />
-            <marker date="1505600791209" expanded="true" signature="2150:2176" ph="..." />
+            <marker date="1505668969526" expanded="true" signature="1968:2550" ph="..." />
+            <marker date="1505668969526" expanded="true" signature="2010:2536" ph="..." />
+            <marker date="1505668969526" expanded="true" signature="2031:2043" ph="..." />
+            <marker date="1505668969526" expanded="true" signature="2043:2523" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/gameRoom/Chat.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="83" column="57" lean-forward="false" selection-start-line="83" selection-start-column="57" selection-end-line="83" selection-end-column="57" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/middleContent/GameConfig.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-216">
+          <caret line="30" column="39" lean-forward="false" selection-start-line="30" selection-start-column="39" selection-end-line="30" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
