@@ -3,13 +3,13 @@ const openModal = (tipo) => {
 		type: "CONFIGURAR_SESION",
 		tipoSesion: tipo
 	}
-}
+};
 
 const closeModal = () => {
 	return{
 		type: "CLOSE_MODAL"
 	}
-}
+};
 
 const iniciarJuego = (game_config, session_socket) => {
 	return{
@@ -49,6 +49,13 @@ const actualizarEstadoJuego = game_state => {
 		type: "UPDATE_GAME",
 		game_state
 	}
-}
+};
 
-export {iniciarJuego, cerrarJuego, login, sendMessage, actualizarEstadoJuego, openModal, closeModal};
+const reiniciarTablero = estado => {
+	return{
+		type: "RESTART",
+		estado: estado
+	}
+};
+
+export {iniciarJuego, cerrarJuego, login, sendMessage, actualizarEstadoJuego, openModal, closeModal, reiniciarTablero};

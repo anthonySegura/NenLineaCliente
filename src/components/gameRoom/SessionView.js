@@ -12,7 +12,6 @@ import store from '../../store';
 import 'react-notifications/lib/notifications.css';
 import {NotificationContainer, NotificationManager} from 'react-notifications';
 
-
 class SessionView extends Component{
 
 	constructor(){
@@ -29,7 +28,7 @@ class SessionView extends Component{
 			const fondoEspera = '#29666D';
 			const fondoTurno = '#cd5c5c';
 
-			if(store.getState().game_state === undefined) return;
+			if(store.getState().game_state === undefined || (this.refs.local === undefined || this.refs.rival === undefined)) return;
 			// Se actualiza el indicador de turno
 			if(store.getState().game_state.turno === local){
 				this.refs.local.setBackground(fondoTurno);
@@ -71,7 +70,7 @@ class SessionView extends Component{
 					<Grid>
 						<Row style = {tableStyle}>
 							<Col sm = {8}>
-								<Board tamFila = {store.getState().game_config.tamFila}/>
+								<Board ref = "tablero" tamFila = {store.getState().game_config.tamFila}/>
 							</Col>
 							<Col className = "game-background" sm = {4} style = {{background: '#29666D'}}>
 								<div className="sidebar">

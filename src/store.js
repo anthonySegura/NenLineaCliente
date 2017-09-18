@@ -6,7 +6,8 @@ let initial_state = {
 	user_info: [],
 	session_socket: null,
 	messages: [],
-	tipoSesion: ''
+	tipoSesion: '',
+	restart: false
 };
 
 const reducer = (state, action) => {
@@ -17,7 +18,8 @@ const reducer = (state, action) => {
 			game_config: action.game_config,
 			session_socket: action.session_socket,
 			messages: [],
-			openModal: false
+			openModal: false,
+			restart: false
 		}
 	}
 	else if(action.type === "CONFIGURAR_SESION"){
@@ -37,7 +39,6 @@ const reducer = (state, action) => {
 		return{
 			...state,
 			playing: false,
-			session_socket: null,
 			messages: []
 		}
 	}
@@ -64,6 +65,13 @@ const reducer = (state, action) => {
 		return{
 			...state,
 			game_config: action.game_config
+		}
+	}
+	else if(action.type === 'RESTART'){
+		console.log(action);
+		return{
+			...state,
+			restart: action.estado
 		}
 	}
 }

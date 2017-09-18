@@ -1,6 +1,6 @@
 import Cable from 'actioncable';
 import store from '../store';
-import {sendMessage, actualizarEstadoJuego} from "../actionCreators";
+import {sendMessage, actualizarEstadoJuego, reiniciarTablero} from "../actionCreators";
 import soundMessage from './recibido.mp3';
 
 const base_url = 'ws://localhost:3001/cable';
@@ -44,6 +44,9 @@ function joinSession(sesion_id, user){
 			}
 			else if(data.action === 'Nueva Partida'){
 				store.dispatch(actualizarEstadoJuego(data));
+			}
+			else if(data.action === 'Restart'){
+				store.dispatch(reiniciarTablero(true));
 			}
 		},
 		mover: function (columna) {
@@ -91,6 +94,9 @@ function newSession(game_config, user) {
 			}
 			else if(data.action === 'Nueva Partida'){
 				store.dispatch(actualizarEstadoJuego(data));
+			}
+			else if(data.action === 'Restart'){
+				store.dispatch(reiniciarTablero(true));
 			}
 		},
 		crearSesion: function(rowSize, nToWin){

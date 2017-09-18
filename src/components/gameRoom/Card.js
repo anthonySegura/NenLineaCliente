@@ -6,6 +6,7 @@ import backgroundImg from './resources/circle-placeholder-bright.svg';
 import fichaRival from './resources/circle-light.svg';
 import fichaRivalWinner from './resources/circle-light-winner.svg';
 import fichaWinner from './resources/circle-dark-winner.svg';
+import {reiniciarTablero} from "../../actionCreators";
 
 class Card extends Component{
 
@@ -71,6 +72,7 @@ class Card extends Component{
 	 */
 	listenToChanges(){
 		store.subscribe(() => {
+
 			if(store.getState().game_state) {
 				let game_state = store.getState().game_state;
 				let fila = game_state.fila;
