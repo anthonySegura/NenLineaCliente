@@ -4,8 +4,6 @@ import store from  '../../store';
 import {login} from '../../actionCreators';
 import {validarUsuario} from "../../serverRequests";
 
-//import background from './background.png';
-
 class Welcome extends Component{
 
 	// Eventos para el login de Google

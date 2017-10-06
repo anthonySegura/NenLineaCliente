@@ -16,14 +16,14 @@ class Chat extends Component{
 		store.subscribe(() => {
 			this.setState({
 				messages: store.getState().messages
-			})
+			});
 		})
 	}
 
 	setMessage(msg){
 		this.setState({
 			message_content: msg
-		})
+		});
 	}
 
 	sendMessage(){
@@ -31,7 +31,7 @@ class Chat extends Component{
 		this.state.session_socket.enviarMensaje(this.state.message_content, name);
 		this.setState({
 			message_content: ''
-		})
+		});
 	}
 
 	renderMessages(){
@@ -68,7 +68,6 @@ class Chat extends Component{
 		const listStyle = {
 			listStyle: 'none',
 			maxHeight: '140px',
-			//backgroundColor: 'rgba(139,195,74,0.46)',
 			borderRadius: '5px',
 			width: '100%',
 			height: '100%',
@@ -81,7 +80,10 @@ class Chat extends Component{
 			paddingRight: '5%',
 			paddingBottom: '10%'
 		}
+
+		// No se muestra en las sesiones contra el jugador automático
 		if(store.getState().tipoSesion === 'pvm') return null;
+
 		return(
 			<div style={chatStyle}>
 				<h3 style={{padding: '5%'}}>CHAT</h3>
@@ -95,11 +97,11 @@ class Chat extends Component{
 					       placeholder= "Escribe tu mensaje"
 					       style={{width:'80%', borderRadius: '5px', marginLeft: '3%'}}
 					       value = {this.state.message_content}
-								 onChange = {(e) => this.setMessage(e.target.value)}	/>
+						   onChange = {(e) => this.setMessage(e.target.value)}	/>
 					<button className="btn btn-success"
 					        onClick={(e) => this.sendMessage()}
-									style={{margin : '2%', borderRadius: '10px'}}>
-									<i className="fa fa-paper-plane" aria-hidden="true"></i>
+							style={{margin : '2%', borderRadius: '10px'}}>
+							<i className="fa fa-paper-plane" aria-hidden="true"></i>
 					</button>
 				</div>
 			</div>

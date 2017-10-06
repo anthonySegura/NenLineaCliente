@@ -70,7 +70,6 @@ function newSession(game_config, user) {
 	let cable = Cable.createConsumer(base_url);
 	let sesion = cable.subscriptions.create({
 			channel: 'SesionChannel',
-			// FIXME: cambiar por el nombre del usuario
 			user_id: user,
 			command: 'new',
 			user: user,
@@ -125,7 +124,6 @@ function sessionIA(game_config, user){
 	let cable = Cable.createConsumer(base_url);
 	let sesion = cable.subscriptions.create({
 		channel: 'SesionChannel',
-		// FIXME: cambiar por el nombre del usuario
 		user_id: user,
 		command: 'IA',
 		user: user,

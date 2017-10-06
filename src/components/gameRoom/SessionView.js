@@ -42,6 +42,7 @@ class SessionView extends Component{
 			// Se actualiza el nombre del rival en el momento que se conecta a la sesión
 			// En caso de que este usuario se el creador de la sesion
 			if(store.getState().game_state.rival){
+				console.log(store.getState().game_state);
 				const rival = store.getState().game_state.rival;
 				this.state.game_config.rival = rival;
 				this.refs.rival.setUser(rival);

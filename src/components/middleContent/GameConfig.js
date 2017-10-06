@@ -8,6 +8,7 @@ class GameConfig extends Component{
 
 	constructor(){
 		super();
+		// Configuración standard
 		this.state = {
 					tamFila: '5x5',
 					n2win: 4,

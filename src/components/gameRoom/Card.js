@@ -1,12 +1,11 @@
 
 import React, {Component} from 'react';
 import store from '../../store';
-
 import backgroundImg from './resources/circle-placeholder-bright.svg';
 import fichaRival from './resources/circle-light.svg';
 import fichaRivalWinner from './resources/circle-light-winner.svg';
 import fichaWinner from './resources/circle-dark-winner.svg';
-import {reiniciarTablero} from "../../actionCreators";
+import fichaCPU from './resources/HAL9000.svg';
 
 class Card extends Component{
 
@@ -14,7 +13,7 @@ class Card extends Component{
 		super();
 		this.state = {
 			img: backgroundImg,
-			classStyle: ''
+			classStyle: 'placeholder'
 		}
 		this.onClick = this.onClick.bind(this);
 		this.showWinnerPosition = this.showWinnerPosition.bind(this);
@@ -34,10 +33,15 @@ class Card extends Component{
 		return size*row+column;
 	}
 
+	/**
+	 * Cambia la imagen por la imagen de la ficha seleccionada por el jugador
+	 * @param {*position} row 
+	 * @param {*position} column 
+	 */
 	putCard(row, column){
 		// Verifica si la posicion es la de esta ficha
 		if (row === this.props.fila && column === this.props.columna) {
-			//let Rival = (store.getState().game_config.rival === 'CPU') ? fichaCPU : fichaRival;
+			//let img = (store.getState().game_config.rival === 'CPU')? fichaCPU : this.props.cardImg;
 			let ficha = (store.getState().game_state.turno === store.getState().user_info.nombre) ? this.props.cardImg : fichaRival;
 			this.setState({
 				img: ficha
@@ -63,7 +67,7 @@ class Card extends Component{
 
 	applyWinnerStyle(){
 		this.setState({
-			classStyle: 'winnerCard'
+			classStyle: 'placeholder winnerCard'
 		});
 	}
 
