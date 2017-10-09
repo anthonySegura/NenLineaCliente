@@ -42,6 +42,8 @@ class SessionsArea extends Component{
 												tamTablero = {value.tam_tablero}
 				                idSesion = {value.id}
 				                tiempoEspera = {value.tiempo_espera}
+				                puntuacion = {value.puntuacion}
+				                categoria = {value.categoria}
 								/>
 				}
 			)

@@ -1,3 +1,5 @@
+import store from "./store";
+
 const openModal = (tipo) => {
 	return{
 		type: "CONFIGURAR_SESION",
@@ -52,6 +54,9 @@ const actualizarEstadoJuego = game_state => {
 };
 
 const reiniciarTablero = estado => {
+	if(estado){
+		store.getState().game_state.game_state = 'Finish';
+	}
 	return{
 		type: "RESTART",
 		estado: estado

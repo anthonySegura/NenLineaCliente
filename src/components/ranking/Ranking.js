@@ -25,7 +25,7 @@ class Ranking extends Component{
 				<li key={user.id}>
 					<div>
 						<h6>{user.name}</h6>
-						<strong>{user.puntuacion}</strong>
+						<h6 style={{marginLeft: '5px'}}>{user.puntuacion}<i className="fa fa-star"></i></h6>
 					</div>
 				</li>
 			);

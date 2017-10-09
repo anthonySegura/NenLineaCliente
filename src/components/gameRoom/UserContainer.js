@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import './resources/styles.css';
+import store from "../../store";
 
 class UserContainer extends Component{
 
@@ -17,9 +18,11 @@ class UserContainer extends Component{
 
 	updateCounter(){
 		console.log('actualizando el contador');
-		this.setState({
-			counter: 1 + this.state.counter
-		})
+		if(store.getState().game_state.game_state != 'Playing') {
+			this.setState({
+				counter: 1 + this.state.counter
+			});
+		}
 	}
 
 	setBackground(img){

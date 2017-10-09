@@ -34,6 +34,17 @@ class Session extends Component{
 		store.dispatch(iniciarJuego(game_config, session));
 	}
 
+	setCategorie(){
+		switch (this.props.categoria){
+			case 1:
+				return 'Avanzado';
+			case 2:
+				return 'Intermedio';
+			case 3:
+				return 'Principiante';
+		}
+	}
+
 	render(){
 		const boxStyle = {
 			background: '#202e3c',
@@ -46,6 +57,8 @@ class Session extends Component{
 			<div style={boxStyle}>
 				<div className="inner" style={{paddingBottom: '5%'}}>
 					<h6>{this.props.user}</h6>
+					<h6>{this.props.puntuacion}<i className="fa fa-star" style={{marginLeft: '2%'}}></i></h6>
+					<h6>{this.setCategorie()}</h6>
 					<h6>N2Win : {this.props.n2win}</h6>
 					<h6>Cantidad de partidas : {this.props.nPartidas}</h6>
 					<h6>Tamaño del tablero : {this.props.tamTablero} x {this.props.tamTablero}</h6>
