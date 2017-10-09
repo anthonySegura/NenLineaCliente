@@ -14,9 +14,16 @@ function sesionListener(onReceived){
 		connected: () => {
 			console.log('Recibiendo datos desde SesionesEnEsperaChannel');
 		},
+
 		disconnected: ()=> {
-			this.perform('unsubscribed');
+			try {
+				this.perform('unsubscribed');
+			}
+			catch(err) {
+				console.log(err);
+			}
 		},
+
 		received: (data) => {
 			onReceived(data);
 		}
@@ -34,9 +41,16 @@ function joinSession(sesion_id, user){
 		connected: () => {
 			console.log('Conexion de invitado a la sesion');
 		},
+
 		disconnected: ()=> {
-			this.perform('unsubscribed');
+			try {
+				this.perform('unsubscribed');
+			}
+			catch(err) {
+
+			}
 		},
+
 		received: (data) => {
 			console.log(data);
 			if(data.action === 'message'){
@@ -56,11 +70,13 @@ function joinSession(sesion_id, user){
 				store.dispatch(reiniciarTablero(true));
 			}
 		},
+
 		mover: function (columna) {
 			this.perform('mover', {
 				columna: columna
 			});
 		},
+
 		enviarMensaje: function (message, name) {
 			console.log('Enviando mensaje');
 			this.perform('enviarMensaje',{
@@ -89,9 +105,16 @@ function newSession(game_config, user) {
 		connected: () => {
 			console.log('Nueva sesion. Recibiendo datos');
 		},
+
 		disconnected: ()=> {
-			this.perform('unsubscribed');
+			try {
+				this.perform('unsubscribed');
+			}
+			catch(err) {
+
+			}
 		},
+
 		received: (data) => {
 			console.log(data);
 			if(data.action === 'message'){
@@ -109,6 +132,7 @@ function newSession(game_config, user) {
 				store.dispatch(reiniciarTablero(true));
 			}
 		},
+
 		crearSesion: function(rowSize, nToWin){
 			this.perform('nuevaSesion', {
 				tamFila: rowSize,
@@ -116,11 +140,13 @@ function newSession(game_config, user) {
 				n2win: nToWin
 			});
 		},
+
 		mover: function (columna) {
 			this.perform('mover', {
 				columna: columna
 			});
 		},
+
 		enviarMensaje: function (message, name) {
 			this.perform('enviarMensaje',{
 				message: message,
@@ -147,9 +173,16 @@ function sessionIA(game_config, user){
 		connected: () => {
 			console.log('Nueva sesion. Recibiendo datos');
 		},
+
 		disconnected: ()=> {
-			this.perform('unsubscribed');
+			try {
+				this.perform('unsubscribed');
+			}
+			catch(err) {
+
+			}
 		},
+
 		received: (data) => {
 			console.log(data);
 			if(data.action === 'message'){
@@ -163,11 +196,13 @@ function sessionIA(game_config, user){
 				store.dispatch(actualizarEstadoJuego(data));
 			}
 		},
+
 		mover: function (columna) {
 			this.perform('moverIA', {
 				columna: columna
 			});
 		},
+
 		enviarMensaje: function (message, name) {
 			this.perform('enviarMensaje',{
 				message: message,

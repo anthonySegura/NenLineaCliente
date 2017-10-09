@@ -20,6 +20,7 @@ function validarUsuario(user_data) {
 		.then((resp) => resp.json())
 		.then(function (data) {
 			console.log(data);
+			sessionStorage.setItem('gameUserData', JSON.stringify(data));
 			if(data.length === 0){
 				console.log('Registrando usuario');
 				registrarUsuario(user_data);
@@ -30,15 +31,26 @@ function validarUsuario(user_data) {
 		})
 }
 
-function getRanking() {
+function getRanking(callback) {
 	fetch(`${server_url}/ranking`)
 		.then((resp) => resp.json())
 		.then((data) => {
-			console.log(data);
+			callback(data);
 		})
 		.catch((error) => {
-
+			console.log(error);
 		})
 }
 
-export {validarUsuario, getRanking};
+function getUserScore(userName, callback) {
+	fetch(`${server_url}/user/puntuacion/${userName}`)
+		.then((resp) => resp.json())
+		.then((data) => {
+			callback(data);
+		})
+		.catch((error) => {
+			console.log(error);
+		})
+}
+
+export {validarUsuario, getRanking, getUserScore};

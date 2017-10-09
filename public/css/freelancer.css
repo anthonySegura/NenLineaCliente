@@ -212,6 +212,18 @@ div.game-room{
   background: rgba(24, 188, 155, 0.6);
 }
 
+.ranking-list{
+
+}
+
+.ranking-list div{
+  display: inline-flex;
+}
+
+.ranking-list h3,h4,h5,h6{
+  float: left;
+}
+
 .MyContainer {
   background-color: #fff;
   float: none;
