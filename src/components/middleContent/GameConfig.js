@@ -54,18 +54,29 @@ class GameConfig extends Component{
 	}
 
 	setOnClickEvent(){
-		switch (store.getState().tipoSesion){
-			case 'pvpr':
-				return this.iniciarSesionRemota;
-			case 'pvm':
-				return this.iniciarSesionIA;
+		try{
+			parseInt(store.getState().n_partidas);
+			switch (store.getState().tipoSesion){
+				case 'pvpr':
+					return this.iniciarSesionRemota;
+				case 'pvm':
+					return this.iniciarSesionIA;
+			}
+		}
+		catch (err){
+			alert("Ingrese el numero de partidas");
 		}
 	}
 
-	setNpartidas(value){
-		const numbers = ['1','2','3','4','5','6','7','8','9','0'];
+	setNpartidas(value) {
 		console.log(value);
+		const numbers = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'];
+		if (!numbers.includes(value)) return;
+		this.setState({
+			n_partidas: value
+		});
 	}
+
 
 
 	renderIAOptions(){
@@ -143,10 +154,12 @@ class GameConfig extends Component{
 											<div className="col-xs-3">
 												<div className="input-group" style= {option}>
 													<span className="input-group-addon">Partidas</span>
-													<input className="text form-control"
-													       placeholder=""
-																 aria-describedby="basic-addon1"
-													       value={this.state.n_partidas}/>
+													<input className="form-control"
+													       placeholder =""
+																 aria-describedby ="basic-addon1"
+													       value = {this.state.n_partidas}
+													       onChange = {(e) => {this.setState({n_partidas: e.target.value})}}
+													/>
 												</div>
 											</div>
 											{this.renderIAOptions()}

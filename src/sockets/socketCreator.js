@@ -1,6 +1,6 @@
 import Cable from 'actioncable';
 import store from '../store';
-import {sendMessage, actualizarEstadoJuego, reiniciarTablero} from "../actionCreators";
+import {sendMessage, actualizarEstadoJuego, reiniciarTablero, cerrarJuego} from "../actionCreators";
 import soundMessage from './recibido.mp3';
 
 const base_url = 'ws://localhost:3001/cable';
@@ -69,6 +69,9 @@ function joinSession(sesion_id, user){
 			else if(data.action === 'Restart'){
 				store.dispatch(reiniciarTablero(true));
 			}
+			else if(data.action === 'Game Over'){
+				store.dispatch(cerrarJuego());
+			}
 		},
 
 		mover: function (columna) {
@@ -130,6 +133,9 @@ function newSession(game_config, user) {
 			}
 			else if(data.action === 'Restart'){
 				store.dispatch(reiniciarTablero(true));
+			}
+			else if(data.action === 'Game Over'){
+				store.dispatch(cerrarJuego());
 			}
 		},
 
@@ -194,6 +200,9 @@ function sessionIA(game_config, user){
 			}
 			else if(data.action === 'Nueva Partida'){
 				store.dispatch(actualizarEstadoJuego(data));
+			}
+			else if(data.action === 'Game Over'){
+				store.dispatch(cerrarJuego());
 			}
 		},
 
