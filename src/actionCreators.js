@@ -70,6 +70,14 @@ const verRanking = () => {
 	}
 }
 
+const cerrarSesion = () => {
+	window.localStorage.clear();
+	window.sessionStorage.clear();
+	return{
+		type: "CLOSE_SESSION"
+	}
+}
+
 export {
 	iniciarJuego,
 	cerrarJuego,
@@ -80,5 +88,6 @@ export {
 	closeModal,
 	reiniciarTablero,
 	verPerfil,
-	verRanking
+	verRanking,
+	cerrarSesion
 };

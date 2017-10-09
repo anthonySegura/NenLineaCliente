@@ -30,4 +30,15 @@ function validarUsuario(user_data) {
 		})
 }
 
-export {validarUsuario};
+function getRanking() {
+	fetch(`${server_url}/ranking`)
+		.then((resp) => resp.json())
+		.then((data) => {
+			console.log(data);
+		})
+		.catch((error) => {
+
+		})
+}
+
+export {validarUsuario, getRanking};

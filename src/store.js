@@ -87,6 +87,13 @@ const reducer = (state, action) => {
 			view: 'ranking'
 		}
 	}
+	else if(action.type === 'CLOSE_SESSION'){
+		return{
+			...state,
+			logged: false,
+			view: 'main'
+		}
+	}
 }
 
 export default createStore(reducer, initial_state);

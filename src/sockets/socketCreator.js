@@ -14,6 +14,9 @@ function sesionListener(onReceived){
 		connected: () => {
 			console.log('Recibiendo datos desde SesionesEnEsperaChannel');
 		},
+		disconnected: ()=> {
+			this.perform('unsubscribed');
+		},
 		received: (data) => {
 			onReceived(data);
 		}
@@ -30,6 +33,9 @@ function joinSession(sesion_id, user){
 	}, {
 		connected: () => {
 			console.log('Conexion de invitado a la sesion');
+		},
+		disconnected: ()=> {
+			this.perform('unsubscribed');
 		},
 		received: (data) => {
 			console.log(data);
@@ -82,6 +88,9 @@ function newSession(game_config, user) {
 	}, {
 		connected: () => {
 			console.log('Nueva sesion. Recibiendo datos');
+		},
+		disconnected: ()=> {
+			this.perform('unsubscribed');
 		},
 		received: (data) => {
 			console.log(data);
@@ -137,6 +146,9 @@ function sessionIA(game_config, user){
 	}, {
 		connected: () => {
 			console.log('Nueva sesion. Recibiendo datos');
+		},
+		disconnected: ()=> {
+			this.perform('unsubscribed');
 		},
 		received: (data) => {
 			console.log(data);

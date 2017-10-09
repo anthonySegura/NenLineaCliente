@@ -49,7 +49,7 @@ class Welcome extends Component{
 						approvalPrompt="force"
 						responseType="permission"
 						scope = "profile email"
-						isSignedIn={true}
+						isSignedIn={false}
 					/>
 				</div>
 			</div>

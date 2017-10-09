@@ -212,6 +212,27 @@ div.game-room{
   background: rgba(24, 188, 155, 0.6);
 }
 
+.MyContainer {
+  background-color: #fff;
+  float: none;
+  margin: 0 auto;
+  border-radius: 5px;
+  color: #2C3E50;
+}
+
+.MyContainer button{
+  margin-bottom: 2%;
+}
+
+.MyContainer h3{
+  margin-bottom: 2.5%;
+  margin-top: 2.5%;
+}
+
+.MyContainer img{
+  marginTop: 3%;
+}
+
 header.masthead {
   padding-top: 100px;
   padding-bottom: 50px;

@@ -6,6 +6,7 @@ import SessionsArea from './components/sessionsList/SessionsArea.js';
 import Welcome from './components/welcomePage/Welcome.js';
 import SessionView from './components/gameRoom/SessionView.js';
 import Profile from './components/profile/Profile.js';
+import Ranking from './components/ranking/Ranking.js';
 
 import Media from 'react-media';
 import store from './store';
@@ -101,7 +102,7 @@ class App extends Component {
 		return(
 			<div>
 				<NavBar/>
-
+				<Ranking/>
 			</div>
 		)
 	}
