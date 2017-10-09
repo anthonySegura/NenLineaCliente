@@ -29,6 +29,21 @@ class SessionView extends Component{
 			const fondoTurno = '#cd5c5c';
 
 			if(store.getState().game_state === undefined || (this.refs.local === undefined || this.refs.rival === undefined)) return;
+			// Si hay ganador
+			if(store.getState().game_state.game_state != 'Playing'){
+				console.log('dentro');
+				console.log(store.getState().game_state);
+				switch (store.getState().game_state.game_state){
+					case local:
+						this.refs.local.updateCounter();
+						break;
+					case store.getState().game_config.rival:
+						this.refs.rival.updateCounter();
+						break;
+					default:
+						break;
+				}
+			}
 			// Se actualiza el indicador de turno
 			if(store.getState().game_state.turno === local){
 				this.refs.local.setBackground(fondoTurno);
@@ -40,7 +55,7 @@ class SessionView extends Component{
 			}
 
 			// Se actualiza el nombre del rival en el momento que se conecta a la sesión
-			// En caso de que este usuario se el creador de la sesion
+			// En caso de que este usuario sea el creador de la sesion
 			if(store.getState().game_state.rival){
 				console.log(store.getState().game_state);
 				const rival = store.getState().game_state.rival;
@@ -56,9 +71,13 @@ class SessionView extends Component{
 
 	render(){
 
+		const sessionStyle = {
+			height: '100%'
+		}
+
 		const tableStyle = {
 			borderRadius: '15px',
-			background: '#fff',
+			background: '#fff'
 		}
 
 		const text = {

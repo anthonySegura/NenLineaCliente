@@ -62,7 +62,7 @@ class Chat extends Component{
 			borderRadius: '15px',
 			margin: '10%',
 			paddingTop: '5%',
-			paddingBottom: '10%',
+			paddingBottom: '10%'
 		};
 
 		const listStyle = {
@@ -80,7 +80,7 @@ class Chat extends Component{
 			paddingRight: '5%',
 			paddingBottom: '10%'
 		}
-
+		console.log(store.getState().tipoSesion);
 		// No se muestra en las sesiones contra el jugador automático
 		if(store.getState().tipoSesion === 'pvm') return null;
 

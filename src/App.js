@@ -5,8 +5,9 @@ import GameConfig from './components/middleContent/GameConfig.js';
 import SessionsArea from './components/sessionsList/SessionsArea.js';
 import Welcome from './components/welcomePage/Welcome.js';
 import SessionView from './components/gameRoom/SessionView.js';
+import Profile from './components/profile/Profile.js';
 
-import Media from 'react-media'
+import Media from 'react-media';
 import store from './store';
 import {login} from './actionCreators.js';
 
@@ -17,7 +18,8 @@ class App extends Component {
 		this.state = {
 			playing: false,
 			logged: false,
-			openModal: false
+			openModal: false,
+			view: 'main'
 		}
 
 		// Se suscribe este estado al store global
@@ -25,7 +27,8 @@ class App extends Component {
 			this.setState({
 				playing: store.getState().playing,
 				logged: store.getState().logged,
-				openModal: store.getState().openModal
+				openModal: store.getState().openModal,
+				view: store.getState().view
 			});
 		});
 
@@ -85,6 +88,24 @@ class App extends Component {
 		)
 	}
 
+	renderProfileView(){
+		return(
+			<div>
+				<NavBar/>
+				<Profile/>
+			</div>
+		)
+	}
+
+	renderRankingView(){
+		return(
+			<div>
+				<NavBar/>
+
+			</div>
+		)
+	}
+
 	/**
 	 * Renderiza el contenido de la vista principal
 	 */
@@ -94,7 +115,19 @@ class App extends Component {
 		if(this.state.logged){
 			// Se renderiza la vista principal
 			if(!this.state.playing){
-				return this.renderMainView();
+				switch (this.state.view){
+					case 'main':
+						return this.renderMainView();
+
+					case 'profile':
+						return this.renderProfileView();
+
+					case 'ranking':
+						return this.renderRankingView();
+
+					default:
+						return this.renderMainView();
+				}
 			}
 			// Cuando se entra a una sesión se pasa a la vista de juego
 			else {
@@ -111,7 +144,7 @@ class App extends Component {
 
   render() {
     return (
-			this.renderBody()
+	    this.renderBody()
     );
   }
 }

@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import NavItem from './NavItem.js';
 import store from '../../store';
-import {cerrarJuego} from "../../actionCreators";
+import {cerrarJuego, verPerfil, verRanking} from "../../actionCreators";
 
 class NavBar extends Component{
 
@@ -24,8 +24,8 @@ class NavBar extends Component{
 					</button>
 					<div className="collapse navbar-collapse" id="navbarResponsive">
 						<ul className="navbar-nav ml-auto">
-							<NavItem name = "Ranking"/>
-							<NavItem name = "Perfil"/>
+							<NavItem name = "Ranking" onClick = {()=> {store.dispatch(verRanking())}}/>
+							<NavItem name = "Perfil" onClick = {()=> {store.dispatch(verPerfil())}}/>
 						</ul>
 					</div>
 				</div>

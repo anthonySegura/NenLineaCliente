@@ -58,4 +58,27 @@ const reiniciarTablero = estado => {
 	}
 };
 
-export {iniciarJuego, cerrarJuego, login, sendMessage, actualizarEstadoJuego, openModal, closeModal, reiniciarTablero};
+const verPerfil = () => {
+	return{
+		type: "PROFILE"
+	}
+}
+
+const verRanking = () => {
+	return{
+		type: "RANKING"
+	}
+}
+
+export {
+	iniciarJuego,
+	cerrarJuego,
+	login,
+	sendMessage,
+	actualizarEstadoJuego,
+	openModal,
+	closeModal,
+	reiniciarTablero,
+	verPerfil,
+	verRanking
+};

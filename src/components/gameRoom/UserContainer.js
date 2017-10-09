@@ -8,9 +8,18 @@ class UserContainer extends Component{
 		this.state = {
 			background: '',
 			nickname: '',
-			img: ''
+			img: '',
+			counter: 0
 		}
 		this.setBackground = this.setBackground.bind(this);
+		this.updateCounter = this.updateCounter.bind(this);
+	}
+
+	updateCounter(){
+		console.log('actualizando el contador');
+		this.setState({
+			counter: 1 + this.state.counter
+		})
 	}
 
 	setBackground(img){
@@ -40,11 +49,11 @@ class UserContainer extends Component{
 
 		return(
 				<div className="row" style= {{backgroundColor: (this.state.background === '')? '#29666D' : this.state.background}}>
-					<div className="col-md-4" style={itemStyle}>
+					<div className="col-md-4">
 						{(this.state.nickname === '') ? this.props.user : this.state.nickname}
 					</div>
 					<div className="col-md-4" style={itemStyle}>
-						{0}
+						{this.state.counter}
 					</div>
 					<div className="col-md-4" style={itemStyle}>
 						<img src = {(this.state.img === '')? this.props.img : this.state.img} alt = "" height={25} width={25}/>

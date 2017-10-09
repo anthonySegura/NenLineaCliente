@@ -194,6 +194,24 @@ div.game-room{
   overflow-y: scroll;
 }
 
+.perfil{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  color: white;
+  /*background: #18BC9C;*/
+  background: rgba(24, 188, 155, 0.6);
+}
+
+.ranking{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  color: white;
+  /*background: #18BC9C;*/
+  background: rgba(24, 188, 155, 0.6);
+}
+
 header.masthead {
   padding-top: 100px;
   padding-bottom: 50px;

@@ -18,6 +18,7 @@ class Card extends Component{
 		this.onClick = this.onClick.bind(this);
 		this.showWinnerPosition = this.showWinnerPosition.bind(this);
 		this.applyWinnerStyle = this.applyWinnerStyle.bind(this);
+		this.clearCard = this.clearCard.bind(this);
 		// La ficha escucha los cambios al estado para actualizarse
 		this.listenToChanges();
 	}
@@ -67,8 +68,15 @@ class Card extends Component{
 
 	applyWinnerStyle(){
 		this.setState({
-			classStyle: 'placeholder winnerCard'
+			classStyle: 'winnerCard placeholder'
 		});
+	}
+
+	clearCard(){
+		this.setState({
+			img: backgroundImg,
+			classStyle: 'placeholder'
+		})
 	}
 
 	/**
@@ -81,8 +89,11 @@ class Card extends Component{
 				let game_state = store.getState().game_state;
 				let fila = game_state.fila;
 				let columna = game_state.columna;
+				if(store.getState().restart){
+					this.clearCard();
+				}
 				// Si hay ganador
-				if(game_state.game_state !== 'Playing') {
+				else if(game_state.game_state !== 'Playing') {
 					let winners = game_state.fichas_ganadoras;
 					this.showWinnerPosition(winners);
 					return;

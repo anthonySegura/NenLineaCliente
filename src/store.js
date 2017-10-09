@@ -7,7 +7,8 @@ let initial_state = {
 	session_socket: null,
 	messages: [],
 	tipoSesion: '',
-	restart: false
+	restart: false,
+	view: 'main'
 };
 
 const reducer = (state, action) => {
@@ -39,6 +40,7 @@ const reducer = (state, action) => {
 		return{
 			...state,
 			playing: false,
+			view: 'main',
 			messages: []
 		}
 	}
@@ -68,10 +70,21 @@ const reducer = (state, action) => {
 		}
 	}
 	else if(action.type === 'RESTART'){
-		console.log(action);
 		return{
 			...state,
 			restart: action.estado
+		}
+	}
+	else if(action.type === 'PROFILE'){
+		return{
+			...state,
+			view: 'profile'
+		}
+	}
+	else if(action.type === 'RANKING'){
+		return{
+			...state,
+			view: 'ranking'
 		}
 	}
 }

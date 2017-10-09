@@ -44,6 +44,7 @@ function joinSession(sesion_id, user){
 			}
 			else if(data.action === 'Nueva Partida'){
 				store.dispatch(actualizarEstadoJuego(data));
+				store.dispatch(reiniciarTablero(false));
 			}
 			else if(data.action === 'Restart'){
 				store.dispatch(reiniciarTablero(true));
@@ -93,6 +94,7 @@ function newSession(game_config, user) {
 			}
 			else if(data.action === 'Nueva Partida'){
 				store.dispatch(actualizarEstadoJuego(data));
+				store.dispatch(reiniciarTablero(false));
 			}
 			else if(data.action === 'Restart'){
 				store.dispatch(reiniciarTablero(true));
