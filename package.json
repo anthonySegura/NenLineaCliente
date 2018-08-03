@@ -6,7 +6,7 @@
     "actioncable": "^5.1.4",
     "react": "^15.6.1",
     "react-bootstrap": "^0.31.3",
-    "react-dom": "^15.6.1",
+    "react-dom": "^16.0.1",
     "react-google-login": "^2.9.3",
     "react-media": "^1.6.1",
     "react-notifications": "^1.4.3",
